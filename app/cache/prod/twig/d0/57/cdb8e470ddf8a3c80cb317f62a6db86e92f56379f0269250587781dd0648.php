@@ -67,18 +67,20 @@ class __TwigTemplate_d057cdb8e470ddf8a3c80cb317f62a6db86e92f56379f0269250587781d
         echo "
     ";
         // line 22
-        echo "    ";
+        echo "        
+    ";
+        // line 23
         $this->displayBlock('fos_user_content', $context, $blocks);
-        // line 24
+        // line 25
         echo "
 ";
     }
 
-    // line 22
+    // line 23
     public function block_fos_user_content($context, array $blocks = array())
     {
-        // line 23
-        echo "    ";
+        echo "<br/>
+    ";
     }
 
     public function getTemplateName()
@@ -88,6 +90,6 @@ class __TwigTemplate_d057cdb8e470ddf8a3c80cb317f62a6db86e92f56379f0269250587781d
 
     public function getDebugInfo()
     {
-        return array (  81 => 23,  78 => 22,  73 => 24,  70 => 22,  58 => 17,  53 => 16,  48 => 15,  45 => 12,  37 => 9,  27 => 6,  24 => 4,  21 => 2,  72 => 22,  67 => 20,  60 => 16,  55 => 14,  51 => 13,  46 => 11,  42 => 10,  39 => 10,  33 => 7,  31 => 6,  28 => 5,);
+        return array (  80 => 23,  75 => 25,  73 => 23,  70 => 22,  67 => 20,  58 => 17,  53 => 16,  48 => 15,  45 => 12,  39 => 10,  37 => 9,  33 => 7,  27 => 6,  24 => 4,  21 => 2,);
     }
 }
