@@ -1,0 +1,25 @@
+{% extends "::SousSite/Admin/baseAdmin.html.twig" %}
+
+{% block content %}
+        
+    <h1>Admin - Article - voir</h1>
+    
+    <a href="{{ path('soleil_article_modifier_admin', {'slug': article.slug} ) }}">Modifier</a> 
+    <a href="{{ path('soleil_article_supprimer_admin', {'slug': article.slug} ) }}">Supprimer</a>
+    
+    <br/><br/>
+    
+    {% if article.image is not null%}
+        <img src="{{ asset(article.image.webPath) }}" alt="{{ article.image.alt }}" /> <br/>
+    {% elseif article.video is not null%}
+        <iframe width="298" height="200" src="{{ article.video }}" allowfullscreen class="grid_4bis alpha omega"></iframe><br/>
+    {% endif %}
+        
+        
+    {{ article.titreFr }} <br/>  
+    {{ article.textFr|raw }} 
+    
+    {{ article.titreEn }} <br/>  
+    {{ article.textEn|raw }}
+
+{% endblock %}

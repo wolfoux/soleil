@@ -1,0 +1,17 @@
+{% extends "::SousSite/Admin/baseAdmin.html.twig" %}
+
+{% block content %}
+
+    <h1>Admin - Article - suprimer</h1>
+
+    <p>
+    Etes-vous certain de vouloir supprimer ce contact "{{ contact.nom }} {{ contact.prenom }}" ?
+    </p>
+
+    <form action="{{ path('soleil_contact_supprimer_admin', {'slug': contact.slug}) }}" method="post">
+
+    <input type="submit" value="Supprimer" class="btn btn-danger" />
+    {{ form_rest(form) }}
+    </form>
+    
+{% endblock %}

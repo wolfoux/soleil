@@ -1,0 +1,75 @@
+#AGENDA
+
+soleil_agenda_accueil:
+    pattern:  /
+    defaults: { _controller: soleilAgendaBundle:Agenda:index }
+    
+soleil_agenda_evenement_site:
+    pattern:  /agenda/{slug_ev}/evenement/voir
+    defaults: { _controller: soleilAgendaBundle:EvenementAgenda:voirSite }
+    options:
+        expose: true
+    
+soleil_agenda_connection:
+    pattern:  /agenda/connection
+    defaults: { _controller: soleilAgendaBundle:Agenda:connection }
+    options:
+        expose: true
+        
+#INSCRIPTION
+soleil_inscription_accueil:
+    pattern:  /agenda/inscription/{slug_ev}
+    defaults: { _controller: soleilAgendaBundle:Inscription:index }
+      
+#PAIEMENT
+    
+soleil_inscription_paiement_details:
+    pattern:  /agenda/inscription/paiement/details/transaction/{slug_ev}
+    defaults: { _controller: soleilAgendaBundle:Payement:details }
+
+soleil_inscription_paiement_cancel:
+    pattern:  /agenda/inscription/paiement/cancel
+    defaults: { _controller: soleilAgendaBundle:Payement:cancel }
+    
+soleil_inscription_paiement_return:
+    pattern:  /agenda/inscription/paiement/return
+    defaults: { _controller: soleilAgendaBundle:Payement:return }
+    
+#ADMINISTRATION
+
+soleil_agenda_accueil_admin:
+  pattern : /admin/agenda
+  defaults: { _controller: soleilAgendaBundle:Agenda:agenda }
+  
+soleil_agenda_evenement_liste_mois:
+    pattern:  /admin/agenda/liste/evenement
+    defaults: { _controller: soleilAgendaBundle:EvenementAgenda:afficher }
+
+soleil_agenda_evenement_voir:
+    pattern:  /admin/agenda/{slug_ev}/evenement/voir
+    defaults: { _controller: soleilAgendaBundle:EvenementAgenda:voir }
+    
+soleil_agenda_evenement_ajouter:
+    pattern:  /admin/agenda/evenement/ajouter
+    defaults: { _controller: soleilAgendaBundle:EvenementAgenda:ajouter }
+    
+soleil_agenda_evenement_modifier:
+    pattern:  /admin/agenda/{slug_ev}/evenement/modifier
+    defaults: { _controller: soleilAgendaBundle:EvenementAgenda:modifier }
+    
+soleil_agenda_evenement_supprimer:
+    pattern:  /admin/agenda/{slug_ev}/evenement/supprimer
+    defaults: { _controller: soleilAgendaBundle:EvenementAgenda:supprimer }
+    
+    
+soleil_agenda_inscription_admin:
+  pattern : /admin/inscription
+  defaults: { _controller: soleilAgendaBundle:Inscription:inscription }
+
+soleil_agenda_inscription_voir_admin:
+  pattern : /admin/inscription/voir/{slug}
+  defaults: { _controller: soleilAgendaBundle:Inscription:voiradmin }
+  
+soleil_agenda_inscription_supprimer_admin:
+  pattern : /admin/inscription/supprimer/{slug}
+  defaults: { _controller: soleilAgendaBundle:Inscription:supprimer }

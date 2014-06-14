@@ -1,0 +1,57 @@
+jms_security_extra:
+    secure_all_services: false
+    expressions: true
+
+security:
+    encoders:
+        soleil\UserBundle\Entity\User: sha512
+
+    #Doit etre prefixer par ROLE_
+    role_hierarchy:
+        ROLE_ADMIN:       
+        
+    #fournisseur d'utilisateurs. Les firewalls s'adressent aux providers pour récupérer les utilisateurs pour les identifier.
+    #ici teste sans bd.
+    providers:
+        main:
+            id: fos_user.user_provider.username
+
+    #un firewall (ou pare-feu) cherche à vérifier que vous êtes bien celui que vous prétendez être
+    firewalls:
+        dev:
+            pattern:  ^/(_(profiler|wdt)|css|images|js)/
+            security: false
+            
+        #main est le nom du pare-feu. Il s'agit juste d'un identifiant unique, mettez en réalité ce que vous voulez.
+        #pattern: ^/ est un masque d'URL. Cela signifie que toutes les URL commençant par « / » (c'est-à-dire notre site tout
+        #entier) sont protégées par ce pare-feu. On dit qu'elles sont derrière le pare-feu main.
+        #anonymous: true accepte les utilisateurs anonymes. Nous protégerons nos ressources grâce aux rôles.
+        main:
+          pattern: ^/
+          anonymous: true
+          provider: main
+          form_login:
+             login_path: fos_user_security_login
+             check_path: fos_user_security_check
+             default_target_path: /admin
+          logout:
+             path: fos_user_security_logout    #est le nom de la route à laquelle le visiteur doit aller pour être déconnecté
+             target: /login      #est l'URL vers laquelle sera redirigé le visiteur après sa déconnexion (ici accueil du site)
+          remember_me:
+                key: %secret% # %secret% est un paramètre de parameters.yml
+
+          # On crée un pare-feu uniquement pour le formulaire
+        main_login:
+        # Cette expression régulière permet de prendre /login (mais pas /login_check !)
+          pattern: ^/login$
+          anonymous: true # On autorise alors les anonymes sur ce pare-feu
+
+    #le contrôle d'accès (ou access control en anglais) va s'occuper de déterminer si le visiteur a les bons droits (rôles) pour accéder à la ressource demandée. 
+    #Il y a différents moyens d'utiliser les contrôles d'accès :
+       #Soit ici depuis la configuration, en appliquant des règles sur des URL. On sécurise ainsi un ensemble d'URL en une seule
+       #ligne, par exemple toutes celles qui commencent par /admin.
+       #Soit directement dans les contrôleurs, en appliquant des règles sur les méthodes des contrôleurs. On peut ainsi appliquer des règles différentes selon des paramètres, vous êtes très libres.
+       #Ces deux moyens d'utiliser la même protection par rôle sont très complémentaires, et offrent une flexibilité intéressante, on en reparle.
+    access_control: 
+      - { path: ^/admin, roles: ROLE_ADMIN }
+        #- { path: ^/login, roles: IS_AUTHENTICATED_ANONYMOUSLY, requires_channel: https }

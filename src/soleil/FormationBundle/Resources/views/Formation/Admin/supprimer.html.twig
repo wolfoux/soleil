@@ -1,0 +1,17 @@
+{% extends "::SousSite/Admin/baseAdmin.html.twig" %}
+
+{% block content %}
+
+    <h1>Admin - Formation - suprimer</h1>
+
+    <p>
+    Etes-vous certain de vouloir supprimer cette Formation "{{ formation.titreFr }}" ?
+    </p>
+
+    <form action="{{ path('soleil_formation_supprimer_admin', {'slug': formation.slug}) }}" method="post">
+
+    <input type="submit" value="Supprimer" class="btn btn-danger" />
+    {{ form_rest(form) }}
+    </form>
+    
+{% endblock %}

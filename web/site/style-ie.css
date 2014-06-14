@@ -1,0 +1,20 @@
+#suivez-nous img{
+	border: none;
+}
+
+
+.info-don {
+	margin-left: 77px !important;
+}
+
+@media only screen and (min-width: 830px) and (max-width: 1050px) {
+	.info-don {
+		margin-left: 0px !important;
+	}
+}
+
+@media only screen and (max-width: 829px) {
+	.info-don {
+		margin-left: 0px !important;
+	}
+}

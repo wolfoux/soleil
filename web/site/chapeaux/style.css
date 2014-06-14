@@ -1,0 +1,216 @@
+/*---specificités générales---*/
+body {
+	background: #fff;
+	margin: 0;
+	font-family: arial;
+	/*empecher le scroll horizontal lors du responsive*/
+	overflow-X:hidden;
+}
+
+figure{ padding: 0; margin: 0;}
+
+.clear {clear:both;}
+
+#principale{width: 100%; margin: 0 auto; background: #fff;}
+
+
+
+/*=================HEADER===================*/
+/*---nav MENU PRINCIPAL---*/
+#principale header{
+	margin-top: 90px;
+}
+
+#lienChapeau{width: 100%;}
+
+h1 {
+	font-size: 0;
+	background: url("img/logo_aveclesoleil.png");
+	width: 300px;
+	height: 203px;
+	margin: 0 auto;
+}
+/*==============FIN DE HEADER===============*/
+
+
+/*===================CONTENU================*/
+#menuPrincipal{
+	height: 200px;
+}
+
+#menuPrincipal ul{
+	padding:0;
+	margin:0 auto;
+	list-style:none;
+	margin-top: 40px;
+	
+}
+
+#menuPrincipal li {
+	float:left;
+	cursor:default;
+}
+
+#li1{
+	margin-left: 205px;
+	margin-right: 80px;
+}
+
+#li2{
+	margin-right: 80px;
+}
+
+.shape {
+	width: 161px;
+	height: 155px;
+	position: relative;
+	z-index: 600;
+}
+
+.overlay{
+	margin: 0;
+}
+		
+.shape .overlay {
+	display:block;
+	width: 161px;
+	height: 150px;
+	position: absolute;
+	-webkit-transform: scale(1,1);
+	-webkit-transition-timing-function: ease-out;
+	-webkit-transition-duration: 0.6s;
+		-moz-transform: scale(1,1);
+		-moz-transition-timing-function: ease-out;
+		-moz-transition-duration: 0.6s;
+			transform: scale(1,1);
+			transition-timing-function: ease-out;
+			transition-duration: 0.6s;				
+	z-index:500;
+	/* allow user to actually perform actions underneath this layer */
+	pointer-events:none; 
+	background-repeat: no-repeat;
+	outline:0;		
+}	
+
+#forme1{
+	background: url("img/forme-complexe1.png");
+}
+
+#forme2{
+	background: url("img/forme-complexe2.png");
+}
+
+#forme3{
+	background: url("img/forme-complexe3.png");
+}
+
+/* hover effect */
+.shape:hover .overlay {
+	-webkit-transform: scale(1.07,1.07);
+	-webkit-transition-timing-function: ease-out;
+	-webkit-transition-duration: 0.3s;
+		-moz-transform: scale(1.07,1.07);
+		-moz-transition-timing-function: ease-out;
+		-moz-transition-duration: 0.3s;
+}
+
+.shape:hover .bg{
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=80)";
+  -moz-opacity: 0.9;
+  -khtml-opacity: 0.9;
+  opacity: 0.9;
+  display:block;
+}
+
+.shape:hover .details{
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+  -moz-opacity: 1;
+  -khtml-opacity: 1;
+  opacity: 1;
+  z-index:450;
+  display:block;	
+}
+			
+/* content styles */
+.shape .bg, .shape .details {
+	position: absolute;
+	width: 161px;
+	height:150px;
+	display:table-cell;
+	vertical-align:middle;
+	text-align:center;
+	top:0;
+	opacity:0;
+	transition: all 0.3s ease;
+		-webkit-transition: all 0.3s ease;
+  		-moz-transition: all 0.3s ease;
+  		-o-transition: all 0.3s ease;			
+	display:none;  
+}		
+
+/*pour filtre a l'hover*/
+.shape .bg {
+	background: #df8900;		
+}
+/*--------------------*/
+
+.shape .details span.heading {
+	font-family: 'Roboto Condensed', serif;		
+	font-size:16px;
+	display:block;
+	margin-top:30px;
+	color:#045604;
+	text-decoration:none;
+	font-weight: bold;
+}
+
+.details hr{
+	margin: 0 0 5px 0;
+}
+
+.details p {
+	font-family: 'Abel', sans-serif;		
+	color:#fff;
+	width: 85%;
+	font-size:14px;
+	margin:0 auto;
+	line-height: 16px;
+}
+
+.shape a.button {
+	padding:3px 0px;
+	font-family: verdana sans-serif;	
+	font-size:11px;	
+	-webkit-border-radius: 20px;
+	-moz-border-radius: 20px;
+	-ms-border-radius: 20px;
+	-o-border-radius: 20px;
+	border-radius: 20px;
+	background: #fff;
+	text-decoration:none;
+	color:#ea940a;
+	display:block;
+	width:70px;
+	margin:0 auto;
+	text-align:center;
+	margin-top:5px;
+	font-weight: bold;
+	transition: background 0.2s ease-out;
+	  	-webkit-transition: background 0.2s ease-out;
+    	-moz-transition: background 0.2s ease-out;
+    	-ms-transition: background 0.2s ease-out;
+    	-o-transition: background 0.2s ease-out;
+}
+
+.shape a.button:hover {
+	background: #045604;
+	color: #fff;				
+}
+/*=================FIN DE CONTENU============*/
+
+
+/*==================PIED==================*/
+#pied{
+ 	display: none;
+}
+

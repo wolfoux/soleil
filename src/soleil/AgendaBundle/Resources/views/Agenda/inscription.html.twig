@@ -1,0 +1,141 @@
+{% extends "::SousSite/base.html.twig" %}
+
+{% block content %}
+
+    <section id="etage2" class="alignement_etage2">
+	<section id="contenu" class="container">
+
+			<section id="don" class="grid_12 alpha omega">
+
+               <h2 class="alignement_h2_etage2">Inscription à un évènement</h2>
+               
+               <form method="post" {{ form_enctype(form) }} id="formulaire-don-coordonnees" class="grid_12 omega alpha">
+				
+	            	<fieldset id="don-coordonnees">
+						<h3>Coordonnées</h3>
+{{ form_widget(form) }}
+                                                {#
+						 <!--CHAMPS DE TEXTE-->
+						<p style="margin-top:30px;">Votre civilité *</p>
+
+	                    <div class="les-boutons-radio" style="padding-top:0px;margin-bottom:25px;">
+						 	<div class="bouton-radio autre-montant">
+                                                            {#
+								 <input type="radio" id="radio-1-1" name="don_mensuel" value="5" class="boutoncoche" />
+								 <label for="radio-1-1"> </label>
+								 <p class="autre-montant civilite">Mme</p>#}
+                                                          {#      {{ form_label(form.genre) }}
+                                                                {{ form_errors(form.genre) }}
+                                                                {{ form_widget(form.genre) }}
+							</div>
+                                                        {#
+							<div class="bouton-radio autre-montant">
+							 	<input type="radio" id="radio-1-2" name="don_mensuel" value="10" class="boutoncoche" />
+							 	<label for="radio-1-2"> </label>
+							 	<p class="autre-montant civilite">Mlle</p>
+							</div>
+
+							<div class="bouton-radio autre-montant">
+								 <input type="radio" id="radio-1-3" name="don_mensuel" value="20" class="boutoncoche" />
+								 <label for="radio-1-3"> </label>
+								 <p class="autre-montant civilite">M</p>
+							</div>#}
+					{#	</div>
+								
+						<div id="coordonnees-precises-don">
+		                    <p class="grid_6">
+		                    	{{ form_label(form.nom) }}
+                                        {{ form_errors(form.nom) }}
+                                        {{ form_widget(form.nom) }}
+		                    </p>
+
+		                    <p class="grid_6 info-don">
+                                        {{ form_label(form.prenom) }}
+                                        {{ form_errors(form.prenom) }}
+                                        {{ form_widget(form.prenom) }}
+		                    </p>
+
+		                    <p class="grid_6">
+		                    	{{ form_label(form.rue) }}
+                                        {{ form_errors(form.rue) }}
+                                        {{ form_widget(form.rue) }}
+		                    </p>
+
+		                    <p class="grid_5 info-don">
+		                    	{{ form_label(form.numrue) }}
+                                        {{ form_errors(form.numrue) }}
+                                        {{ form_widget(form.numrue) }}
+		                    </p>
+
+		                    <p class="grid_5">
+		                    	{{ form_label(form.cp) }}
+                                        {{ form_errors(form.cp) }}
+                                        {{ form_widget(form.cp) }}
+		                    </p>
+
+		                    <p class="grid_5 info-don">
+		                    	{{ form_label(form.ville) }}
+                                        {{ form_errors(form.ville) }}
+                                        {{ form_widget(form.ville) }}
+		                    </p>
+                                    
+                                    <p class="grid_5">
+		                    	{{ form_label(form.pays) }}
+                                        {{ form_errors(form.pays) }}
+                                        {{ form_widget(form.pays) }}
+		                    </p>
+
+		                    <p class="grid_5 info-don">
+		                    	{{ form_label(form.tel) }}
+                                        {{ form_errors(form.tel) }}
+                                        {{ form_widget(form.tel) }}
+		                    </p>
+
+		                    <p class="grid_5">
+		                    	{{ form_label(form.mail) }}
+                                        {{ form_errors(form.mail) }}
+                                        {{ form_widget(form.mail) }}
+		                    </p>
+
+		                    <p class="grid_5 info-don">
+		                    	{{ form_label(form.datenaissance) }}
+                                        {{ form_errors(form.datenaissance) }}
+                                        {{ form_widget(form.datenaissance) }}
+		                    </p>
+
+		                    <div>
+								<input id="validation-coordonnees" type="submit" value="Je valide mes coordonnées">
+							</div>
+	                    </div>#}
+                                                <input id="validation-coordonnees" type="submit" value="Je valide mes coordonnées">
+					</fieldset>
+				</form>	 
+               
+			</section>
+	</section>
+</section>
+{#
+<section id="etage2" class="alignement_etage2">
+    
+    <section id="contenu" class="container">
+
+	<section id="don" class="grid_12 alpha omega">
+            
+<p>Agenda - Evenement - inscription</p>
+
+<p>info Ev</p>
+            
+            <p>info perso</p>
+
+            <div class="well">
+                <form method="post" {{ form_enctype(form) }}>
+                    {{ form_widget(form) }}
+                    <input type="submit" class="btn btn-primary" />
+                </form>
+            </div>  
+
+        </section>
+    </section>
+</section>     
+#}  
+{% endblock %}

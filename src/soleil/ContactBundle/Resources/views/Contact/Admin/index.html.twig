@@ -1,0 +1,27 @@
+{% extends "::SousSite/Admin/baseAdmin.html.twig" %}
+
+{% block content %}
+        
+    <h1>Admin - Contact</h1>
+    
+    {#<a href="{{ path('soleil_contact_ajouter_admin') }}">Ajouter un contact</a>#}
+    
+    
+            <a href="{{ path('soleil_contact_modifier_admin', {'slug': contact.slug} ) }}">Modifier</a> 
+   {# <a href="{{ path('soleil_contact_supprimer_admin', {'slug': contact.slug} ) }}">Supprimer</a>#}
+    
+    <br/><br/>
+    
+    {# <img src="{{ asset(contact.image.webPath) }}" alt="{{ contact.image.alt }}" /> <br/> #}
+    
+    {{ contact.prenom }} <br/>
+    {{ contact.nom }} <br/>
+    {{ contact.tel }} <br/>
+    {{ contact.gsm }} <br/>
+    {{ contact.mail }} <br/>
+    {{ contact.adresse|raw }} <br/>
+            
+
+
+{% endblock %}
+            

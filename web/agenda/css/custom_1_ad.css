@@ -1,0 +1,51 @@
+
+.container{
+    width: 100%;
+    max-width: 100%;
+}
+
+.fc-calendar .fc-row > div.fc-today {
+	background: #428BCA;
+}
+
+.custom-header {
+        border-top: 5px solid #428BCA;
+}
+
+.custom-header h3 {
+	/*float: left;*/
+	font-weight: 400;
+        font-size: 25px;
+}
+
+.fc-calendar .fc-head {
+	color: #428BCA;
+}
+
+.custom-content-reveal {
+    /*background: rgba(255, 255, 255, 0.9); /*234 148 10*/
+    background: white;
+    border-top: 5px solid #428BCA;
+    border-radius: 5px 5px 0 0;
+    
+    color:#333333;
+    /*color:red;*/
+}
+
+.custom-content-reveal span.custom-content-close {
+    background: #428BCA;
+}
+
+
+/***********************************************************************/
+
+.fc-calendar .fc-row > div.fc-content:after {
+	color: #428BCA;
+}
+
+.fc-calendar .fc-row > div.fc-content:hover:after{
+	color: #155183;
+}
+
+
+

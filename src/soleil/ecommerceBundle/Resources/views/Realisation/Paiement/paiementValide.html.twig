@@ -1,0 +1,54 @@
+{% extends "::SousSite/base.html.twig" %}
+
+{% block content %}
+
+<section id="etage2" class="alignement_etage2">
+	<section id="contenu" class="container">
+
+			<section id="don" class="grid_12 alpha omega">
+
+               <h2 class="alignement_h2_etage2">Confirmation Achat</h2>
+                    
+				<p class="alignement_1erP_etage2">Votre Achat à bien été éfectuer</p>
+
+
+				<form id="formulaire-don-paiement">
+	            	<fieldset class="grid_12" id="don-paiement">
+							{#<h3>Paiement</h3>#}
+							<h4>Récapitulatif de vos informations personnelles</h4> 
+
+						<p class="infos-don-paiement grid_5">
+							<strong>{{inscri.genre }} {{inscri.nom }} </strong><br/>
+							{{inscri.adresse }}<br/> 
+							{{inscri.cp }} {{inscri.ville }} {{inscri.etatprov }} {{inscri.pays }}
+						</p>
+						
+						<p id="infos-transaction" class="infos-don-paiement grid_5">
+							<strong>Numéro unique ( à concerver ) :</strong> {{inscri.numInscrit }}<br/>
+                                                        <strong>Réalisation :</strong> {{inscri.realisation.prix}}<br/>
+							<strong>Montant :</strong> {{inscri.amount }} EUR<br/> 	
+                                                        <strong>Bénéficiaire :</strong> Avec Le Soleil ASBL
+						</p>
+                                                
+                                                
+						<div class="les-boutons-radio" style="padding-top:0px;">
+							<div class="bouton-radio autre-montant">
+							 	<strong>Téléphone :</strong> {{inscri.tel }}<br/>
+                                                                <strong>Mail :</strong> {{inscri.mail }}<br/>
+                                                                <strong>Date de naissance :</strong> {{inscri.datenaissance|date('d-m-Y') }} 	
+							</div>
+						</div>
+                                                
+                                               
+
+	                    <div>
+
+						</div>
+					</fieldset>
+				</form>	            
+			</section>
+	</section>
+</section>
+
+{% endblock %}
+

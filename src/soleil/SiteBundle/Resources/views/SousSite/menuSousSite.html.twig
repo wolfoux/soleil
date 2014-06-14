@@ -1,0 +1,44 @@
+
+<section id="etage1">
+
+		<div></div>  
+                
+                <nav id="menuSecondaire" class="container"> 
+                    <ul>
+                {% for site in rubriques %}
+       
+                        {% for rub in site.rubriques %}
+
+                               <li class="grid_2 animationLi push_li Li{{loop.index}}">
+					<a href="{{ path(rub.url) }}" class="menu{{loop.index}}"></a>
+				</li>
+
+                        {% endfor %} 
+
+                 {% endfor %} 
+                            	</ul>
+		</nav>
+		
+                
+                
+
+	<!--=================Pour que l'on puisse cliquer===================-->
+<nav id="menuSecondaireBis" class="container"> 
+			<ul>
+        {% for site in rubriques %}
+       
+                        {% for rub in site.rubriques %}
+
+                               
+                               <li class="grid_2 animationLi push_li">
+					<a href="{{ path(rub.url) }}" class="menu{{loop.index}}">{{ rub.nomFr }}</a>
+				</li>
+                        {% endfor %} 
+
+                 {% endfor %} 
+                        	</ul>
+		</nav>       
+
+		
+</section>
+

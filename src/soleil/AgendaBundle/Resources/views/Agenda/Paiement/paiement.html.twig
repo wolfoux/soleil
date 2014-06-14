@@ -1,0 +1,86 @@
+{% extends "::SousSite/base.html.twig" %}
+
+{% block content %}
+
+    <section id="etage2" class="alignement_etage2">
+	<section id="contenu" class="container">
+
+			<section id="don" class="grid_12 alpha omega">
+
+               <h2 class="alignement_h2_etage2">Inscription - {{ domaine }}</h2>
+                    
+
+               <p class="alignement_1erP_etage2">Voici le résumé de vos coordonnées. Veuillez sélectionner votre moyen de paiement. Vous serez ensuite redirigé vers le site de Paypal.</p>
+{#
+<div class="well">
+<form method="post" {{ form_enctype(form) }} id="formulaire-don-paiement">
+{{ form_widget(form) }}
+<input type="submit" class="btn btn-primary" />
+</form>
+</div>
+#}
+                             <div class="well">
+                                 <form action="{{ path('soleil_inscription_paiement_details', {'id': insc.id } ) }}" method="POST" id="formulaire-don-paiement">
+
+                                
+                                        <fieldset class="grid_12" id="don-paiement">
+							<h3>Paiement - {{insc.slug}}</h3>
+							<h4>Récapitulatif de vos informations personnelles</h4> 
+
+						<p class="infos-don-paiement grid_5">
+							<strong>{{insc.nom}}</strong><br/>
+							{{insc.numrue}} {{insc.rue}}<br/>
+							{{insc.cp}} {{insc.ville}} {{insc.pays}}
+						</p>
+						
+						<p id="infos-transaction" class="infos-don-paiement grid_5"> 
+							<strong>Numéro de la transaction :</strong> {{ numTrans }} <br/>
+                                                        <strong>Evènement :</strong> {{ insc.evenementAgenda.nomFr }} <br/>
+							<strong>Prix :</strong> {{insc.evenementAgenda.prix}} EUR<br/>
+							<strong>Bénéficiaire :</strong> Avec Le Soleil ASBL
+						</p>
+
+						<h4 id="choix-paiement">Moyen de paiement</h4>
+						<div class="les-boutons-radio" style="padding-top:0px;">
+							<div class="bouton-radio autre-montant">
+                                                                           {#                                            
+							 	<input type="radio" id="radio-1-2" name="don_mensuel" value="paypal" class="boutoncoche" />
+							 	<label for="radio-1-2"> </label>
+#}
+							 	<figure class="autre-montant">
+									<img class="paypal" src="{{ asset('site/img/icone-paypal.png') }}" alt="paypal">
+								</figure> 
+                                                             
+							</div>
+						</div>
+
+	                    <div>
+                            {#    
+                     <input type='hidden' value="{{insc.evenementAgenda.prix}}" name="amount" />
+                                <input name="currency_code" type="hidden" value="EUR" />
+                                <input name="shipping" type="hidden" value="0.00" />
+                                <input name="tax" type="hidden" value="0.00" />
+                    <input name="return" type="hidden" value="http://votredomaine/paiementValide.php" />
+                    <input name="cancel_return" type="hidden" value="http://votredomaine/paiementAnnule.php" />
+                    <input name="notify_url" type="hidden" value="http://{{ domaine }}/agenda/agenda/inscription/paiement/validation" />
+                                <input name="cmd" type="hidden" value="_xclick" />
+                    <input name="business" type="hidden" value="pat_marchand@hotmail.com" />
+                    <input name="item_name" type="hidden" value="Inscription : {{ insc.evenementAgenda.nomFr }}" />
+                                <input name="no_note" type="hidden" value="1" />
+                                <input name="lc" type="hidden" value="FR" />
+                                <input name="bn" type="hidden" value="PP-BuyNowBF" />
+                    <input name="custom" type="hidden" value="{{insc.id}}" />
+                    #}
+                              
+                                <input type='hidden' value="{{insc.id}}" name="id" />
+                                
+							<input id="validation-paiement" type="submit" value="Je valide mon inscription">
+						</div>
+					</fieldset>
+				</form>	 
+                                     </div>
+			</section>
+	</section>
+</section>
+
+{% endblock %}

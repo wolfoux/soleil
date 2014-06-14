@@ -1,0 +1,23 @@
+soleil_sous_site_accueil:
+  pattern : /
+  defaults: { _controller: soleilSiteBundle:Site:index }
+  
+soleil_sous_site_accueil_admin:
+  pattern : /admin
+  defaults: { _controller: soleilSiteBundle:Admin:index }
+  
+soleil_sous_site_change_admin:
+  pattern : /admin
+  defaults: { _controller: soleilSiteBundle:Admin:changeAdmin }
+
+#CONFIGURATION
+
+soleil_config_accueil_admin:
+  pattern : /admin/donnee-personel
+  defaults: { _controller: soleilSiteBundle:Configuration:index }
+  
+soleil_config_modifier_admin:
+  pattern : /admin/donnee-personel/modifier
+  defaults: { _controller: soleilSiteBundle:Configuration:modifier }
+
+

@@ -1,0 +1,17 @@
+
+{% extends "::SousSite/Admin/baseAdmin.html.twig" %}
+
+{% block content %}
+
+    <h1>Admin - Categorie Agenda - Ajouter - {{raw}}</h1>
+    
+    {% if raw == 1 %}
+     {% include "soleilAgendaBundle:Agenda:Admin/formulaire.html.twig" %} 
+    {% else%}
+    <p>
+        vous devez d abord ajouter une formation avant de pouvoir ajouter un evenement
+    </p>
+    {% endif %}
+
+{% endblock %}
+    

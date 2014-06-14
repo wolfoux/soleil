@@ -1,0 +1,21 @@
+{% extends "::SousSite/Admin/baseAdmin.html.twig" %}
+
+{% block content %}
+        
+    <h1>Admin - Formation - voir</h1>
+    
+   <a href="{{ path('soleil_formation_modifier_admin', {'slug':formation.slug}) }}">Modifier</a> 
+   <a href="{{ path('soleil_formation_supprimer_admin', {'slug':formation.slug}) }}">supprimer</a><br/>
+    
+    <br/><br/>
+    
+    creat : {{ formation.datecreat|date("m/d/Y") }} <br/> 
+    modife : {{ formation.dateEdition|date("m/d/Y") }} <br/> 
+    {# <img src="{{ asset(formation.image.webPath) }}" alt="{{ formation.image.alt }}" /> <br/> #}
+    
+    {{ formation.TitreFr }} <br/>
+    {{ formation.textFr|raw }} 
+    {{ formation.TitreEn }} <br/>  
+    {{ formation.textEn|raw }}  
+
+{% endblock %}

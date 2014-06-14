@@ -1,0 +1,147 @@
+/*
+Responsive 996px grid system ~ Grid CSS.
+Copyright 2013, Josh Cope
+
+12 Columns ~ Margin left: 13px ~ Margin right: 13px
+
+Based on the 960.gs grid system - http://960.gs/
+by Nathan Smith
+
+Licensed under GPL and MIT
+*/
+
+/* =============================================================================
+   Base 966px Grid
+   ========================================================================== */
+   
+	body {min-width: 996px;}
+
+	/* Container */
+	.container, .containerBis {
+		margin-left: auto;
+		margin-right: auto;
+		width: 996px;
+	}
+
+	/* Global */
+	.grid_2,
+	.grid_12 {
+		display: inline;
+		float: left;
+		margin-left: 13px;
+		margin-right: 13px;
+	}
+	
+
+	/* Children (Alpha ~ First, Omega ~ Last) */
+	.alpha {margin-left: 0;}
+	.omega {margin-right: 0;}
+
+	/* Base Grid */
+	.containerBis .grid_2 {width: 140px;}
+
+
+/* =============================================================================
+   768px Grid
+   ========================================================================== */
+
+@media only screen and (min-width: 620px) and (max-width: 1050px) {
+	
+	body {min-width: 550px;}
+
+	/* Container | 768px */
+	.container, .containerBis {width: 550px;}
+
+	/* Global | 768px */
+	.grid_2,
+	.grid_12 {margin-left: 8px;
+		margin-right: 8px;}
+		
+	#li1{margin-left: 5px;}
+
+	h1{float: none; margin: 0 auto;}
+
+
+	/* Base Grid | 768px */
+	.containerBis .grid_2 {width: 112px;}
+	
+	/* Children (Alpha ~ First, Omega ~ Last) | 768 */
+	.alpha {margin-left: 0;}
+	.omega {margin-right: 0;}
+}
+
+
+/* =============================================================================
+   Less than 768px
+   ========================================================================== */
+   
+@media only screen and (max-width: 619px) {
+	
+	body{min-width:0;}
+	
+	/* Container */
+	.container, .containerBis { margin:0 auto; width:100%; }
+	
+	/* Global */
+	.containerBis .grid_2	{
+		width:100%;
+		clear: both;
+		float: none;
+		margin-left: 0;
+		margin-right: 0;
+		display:inline-block;
+		padding-left: 43.5px;
+		padding-right: 43.5px;
+		
+		/* IE 6&7 */
+		zoom:1;
+		*display:inline;
+	}
+
+
+	h1{float: none; margin: 0 auto; display: block;}
+
+	#li1{margin-left: 30px; margin-right: 50px;}
+	#li2{margin-right: 50px;}
+	
+	/* Nested children need no padding */
+	.grid_1  .grid_1,
+	.grid_2  .grid_1, .grid_2  .grid_2,
+	.grid_3  .grid_1, .grid_3  .grid_2, .grid_3  .grid_3,
+	.grid_4  .grid_1, .grid_4  .grid_2, .grid_4  .grid_3, .grid_4  .grid_4,
+	.grid_5  .grid_1, .grid_5  .grid_2, .grid_5  .grid_3, .grid_5  .grid_4, .grid_5  .grid_5,
+	.grid_6  .grid_1, .grid_6  .grid_2, .grid_6  .grid_3, .grid_6  .grid_4, .grid_6  .grid_5, .grid_6  .grid_6,
+	.grid_7  .grid_1, .grid_7  .grid_2, .grid_7  .grid_3, .grid_7  .grid_4, .grid_7  .grid_5, .grid_7  .grid_6, .grid_7  .grid_7,
+	.grid_8  .grid_1, .grid_8  .grid_2, .grid_8  .grid_3, .grid_8  .grid_4, .grid_8  .grid_5, .grid_8  .grid_6, .grid_8  .grid_7, .grid_8  .grid_8,
+	.grid_9  .grid_1, .grid_9  .grid_2, .grid_9  .grid_3, .grid_9  .grid_4, .grid_9  .grid_5, .grid_9  .grid_6, .grid_9  .grid_7, .grid_9  .grid_8, .grid_9  .grid_9,
+	.grid_10  .grid_1, .grid_10  .grid_2, .grid_10  .grid_3, .grid_10  .grid_4, .grid_10  .grid_5, .grid_10  .grid_6, .grid_10  .grid_7, .grid_10  .grid_8, .grid_10  .grid_9, .grid_10  .grid_10,
+	.grid_11  .grid_1, .grid_11  .grid_2, .grid_11  .grid_3, .grid_11  .grid_4, .grid_11  .grid_5, .grid_11  .grid_6, .grid_11  .grid_7, .grid_11  .grid_8, .grid_11  .grid_9, .grid_11  .grid_10, .grid_11  .grid_11,
+	.grid_12  .grid_1, .grid_12  .grid_2, .grid_12  .grid_3, .grid_12  .grid_4, .grid_12  .grid_5, .grid_12  .grid_6, .grid_12  .grid_7, .grid_12  .grid_8, .grid_12  .grid_9, .grid_12  .grid_10, .grid_12  .grid_11, .grid_12  .grid_12	{
+		padding-left: 0px;
+		padding-right: 0px;
+	}
+		
+}
+
+
+/* =============================================================================
+   Less than 480px
+   ========================================================================== */
+@media only screen and (max-width: 618px) {
+	
+	/* Container */
+	.container { width:300px;}
+	.containerBis{ width:190px;}
+	
+	/* Global */
+
+	.containerBis .grid_2{
+		width:190px;
+		padding-left: 15px;
+		padding-right: 15px;
+	}
+
+	#li1{margin-left: 0px; margin-right: 0px;}
+	#li2{margin-right: 0px;}
+
+}
