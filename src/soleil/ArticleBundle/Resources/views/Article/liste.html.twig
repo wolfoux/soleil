@@ -1,4 +1,4 @@
-
+<section>
 {% for  av in articlesVideo %}
     
      {% if loop.index == 1 %}
@@ -20,8 +20,9 @@
  <p class="toutes-videos"><a href="{{ path('soleil_article_voir_plus',{'voirplus':'articleVideo'}) }}">voir + de vidéos</a></p>
  {% endif %}
 {% endfor %}
+</section>
 
-
+<section>
 {% for  a in articles %}
 
     {% if loop.index == 1 %}
@@ -42,7 +43,7 @@
  <p class="toutes-videos"><a href="{{ path('soleil_article_voir_plus',{'voirplus':'article'}) }}">voir + d'article</a></p>
  {% endif %}
 {% endfor %}
-
+</section>
 
 
 
