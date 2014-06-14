@@ -48,17 +48,27 @@ class __TwigTemplate_95f407acab821ae815857955a007b3c20170cb84eba535fca188d369027
                 $context['loop']['last'] = 1 === $length;
             }
             foreach ($context['_seq'] as $context["_key"] => $context["rub"]) {
+                echo " ";
                 // line 11
-                echo "
-                               <li class=\"grid_2 animationLi push_li Li";
-                // line 12
+                echo "                            
+                            ";
+                // line 18
+                echo "                               <li class=\"grid_2 animationLi push_li Li";
                 echo twig_escape_filter($this->env, $this->getAttribute((isset($context["loop"]) ? $context["loop"] : $this->getContext($context, "loop")), "index"), "html", null, true);
+                echo " ";
+                if (($this->getAttribute((isset($context["rub"]) ? $context["rub"] : $this->getContext($context, "rub")), "url") == (isset($context["route"]) ? $context["route"] : $this->getContext($context, "route")))) {
+                    echo "actif";
+                }
                 echo "\">
 \t\t\t\t\t<a href=\"";
-                // line 13
+                // line 19
                 echo $this->env->getExtension('routing')->getPath($this->getAttribute((isset($context["rub"]) ? $context["rub"] : $this->getContext($context, "rub")), "url"));
                 echo "\" class=\"menu";
                 echo twig_escape_filter($this->env, $this->getAttribute((isset($context["loop"]) ? $context["loop"] : $this->getContext($context, "loop")), "index"), "html", null, true);
+                echo " ";
+                if (($this->getAttribute((isset($context["rub"]) ? $context["rub"] : $this->getContext($context, "rub")), "url") == (isset($context["route"]) ? $context["route"] : $this->getContext($context, "route")))) {
+                    echo "active";
+                }
                 echo "\"></a>
 \t\t\t\t</li>
 
@@ -75,7 +85,7 @@ class __TwigTemplate_95f407acab821ae815857955a007b3c20170cb84eba535fca188d369027
             $_parent = $context['_parent'];
             unset($context['_seq'], $context['_iterated'], $context['_key'], $context['rub'], $context['_parent'], $context['loop']);
             $context = array_intersect_key($context, $_parent) + $_parent;
-            // line 16
+            // line 22
             echo " 
 
                  ";
@@ -83,7 +93,7 @@ class __TwigTemplate_95f407acab821ae815857955a007b3c20170cb84eba535fca188d369027
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['site'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 18
+        // line 24
         echo " 
                             \t</ul>
 \t\t</nav>
@@ -95,14 +105,14 @@ class __TwigTemplate_95f407acab821ae815857955a007b3c20170cb84eba535fca188d369027
 <nav id=\"menuSecondaireBis\" class=\"container\"> 
 \t\t\t<ul>
         ";
-        // line 28
+        // line 34
         $context['_parent'] = (array) $context;
         $context['_seq'] = twig_ensure_traversable((isset($context["rubriques"]) ? $context["rubriques"] : $this->getContext($context, "rubriques")));
         foreach ($context['_seq'] as $context["_key"] => $context["site"]) {
-            // line 29
+            // line 35
             echo "       
                         ";
-            // line 30
+            // line 36
             $context['_parent'] = (array) $context;
             $context['_seq'] = twig_ensure_traversable($this->getAttribute((isset($context["site"]) ? $context["site"] : $this->getContext($context, "site")), "rubriques"));
             $context['loop'] = array(
@@ -119,15 +129,24 @@ class __TwigTemplate_95f407acab821ae815857955a007b3c20170cb84eba535fca188d369027
                 $context['loop']['last'] = 1 === $length;
             }
             foreach ($context['_seq'] as $context["_key"] => $context["rub"]) {
-                // line 31
+                // line 37
                 echo "
                                
-                               <li class=\"grid_2 animationLi push_li\">
+                               <li class=\"grid_2 animationLi push_li ";
+                // line 39
+                if (($this->getAttribute((isset($context["rub"]) ? $context["rub"] : $this->getContext($context, "rub")), "url") == (isset($context["route"]) ? $context["route"] : $this->getContext($context, "route")))) {
+                    echo "actif";
+                }
+                echo "\">
 \t\t\t\t\t<a href=\"";
-                // line 34
+                // line 40
                 echo $this->env->getExtension('routing')->getPath($this->getAttribute((isset($context["rub"]) ? $context["rub"] : $this->getContext($context, "rub")), "url"));
                 echo "\" class=\"menu";
                 echo twig_escape_filter($this->env, $this->getAttribute((isset($context["loop"]) ? $context["loop"] : $this->getContext($context, "loop")), "index"), "html", null, true);
+                echo " ";
+                if (($this->getAttribute((isset($context["rub"]) ? $context["rub"] : $this->getContext($context, "rub")), "url") == (isset($context["route"]) ? $context["route"] : $this->getContext($context, "route")))) {
+                    echo "active";
+                }
                 echo "\">";
                 echo twig_escape_filter($this->env, $this->getAttribute((isset($context["rub"]) ? $context["rub"] : $this->getContext($context, "rub")), "nomFr"), "html", null, true);
                 echo "</a>
@@ -145,7 +164,7 @@ class __TwigTemplate_95f407acab821ae815857955a007b3c20170cb84eba535fca188d369027
             $_parent = $context['_parent'];
             unset($context['_seq'], $context['_iterated'], $context['_key'], $context['rub'], $context['_parent'], $context['loop']);
             $context = array_intersect_key($context, $_parent) + $_parent;
-            // line 36
+            // line 42
             echo " 
 
                  ";
@@ -153,7 +172,7 @@ class __TwigTemplate_95f407acab821ae815857955a007b3c20170cb84eba535fca188d369027
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['site'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 38
+        // line 44
         echo " 
                         \t</ul>
 \t\t</nav>       
@@ -176,6 +195,6 @@ class __TwigTemplate_95f407acab821ae815857955a007b3c20170cb84eba535fca188d369027
 
     public function getDebugInfo()
     {
-        return array (  157 => 38,  149 => 36,  128 => 34,  123 => 31,  106 => 30,  103 => 29,  99 => 28,  79 => 16,  59 => 13,  55 => 12,  35 => 10,  72 => 19,  65 => 15,  61 => 14,  57 => 13,  52 => 11,  47 => 9,  44 => 8,  27 => 7,  19 => 1,  191 => 77,  188 => 76,  182 => 47,  176 => 44,  168 => 39,  162 => 36,  158 => 35,  155 => 34,  152 => 33,  140 => 24,  135 => 22,  131 => 21,  127 => 20,  121 => 18,  110 => 11,  104 => 8,  92 => 25,  87 => 18,  85 => 76,  77 => 71,  69 => 66,  50 => 49,  45 => 32,  43 => 18,  40 => 17,  34 => 9,  32 => 9,  24 => 2,  83 => 45,  63 => 28,  48 => 33,  38 => 11,  31 => 4,  28 => 8,);
+        return array (  176 => 44,  168 => 42,  143 => 40,  137 => 39,  133 => 37,  116 => 36,  113 => 35,  109 => 34,  97 => 24,  89 => 22,  65 => 19,  56 => 18,  53 => 11,  35 => 10,  28 => 8,  19 => 1,  175 => 76,  172 => 75,  160 => 21,  156 => 20,  152 => 19,  146 => 17,  140 => 8,  128 => 80,  123 => 77,  121 => 75,  112 => 70,  110 => 69,  103 => 65,  82 => 47,  76 => 44,  70 => 41,  66 => 40,  59 => 36,  52 => 32,  48 => 31,  44 => 29,  42 => 17,  32 => 9,  30 => 8,  22 => 2,);
     }
 }

@@ -202,6 +202,10 @@ Licensed under GPL and MIT
 	.info-don{width:435px !important; margin-left: 80px !important;}
 	#coordonnees-precises-don select{width:435px !important;}
 
+	.toutes-videos{
+		width: 100%;
+		text-align: right !important;
+	}
 
 /* =============================================================================
    1400px Grid
@@ -227,7 +231,7 @@ Licensed under GPL and MIT
         
         #etage1 div{
             width: 1345px;
-        }
+    }
 }
 
 
@@ -259,7 +263,7 @@ Licensed under GPL and MIT
 	.grid_12 {margin-left: 8px;
 		margin-right: 8px;}
 		
-	.grid_4bis,.grid_3biss {
+	.grid_3biss {
 		margin-left: 12px;
 		margin-right: 12px;
 	}
@@ -397,6 +401,10 @@ Licensed under GPL and MIT
 	/* Children (Alpha ~ First, Omega ~ Last) | 768 */
 	.alpha {margin-left: 0;}
 	.omega {margin-right: 0;}
+
+	.toutes-videos{
+		width: auto;
+	}
 }
 
 

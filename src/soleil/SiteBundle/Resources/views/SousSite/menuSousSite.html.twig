@@ -7,10 +7,16 @@
                     <ul>
                 {% for site in rubriques %}
        
-                        {% for rub in site.rubriques %}
-
-                               <li class="grid_2 animationLi push_li Li{{loop.index}}">
-					<a href="{{ path(rub.url) }}" class="menu{{loop.index}}"></a>
+                        {% for rub in site.rubriques %} {# actif active #}
+                            
+                            {#
+                                {% if rub.url == 'soleil_agenda_evenement_site' %}{% set route = 'soleil_inscription_accueil'%}{% endif%}
+                                {% if rub.url == 'soleil_inscription_paiement_details' %} {% set route = 'soleil_inscription_accueil'%}{% endif%}
+                                {% if rub.url == 'soleil_inscription_paiement_cancel' %} {% set route = 'soleil_inscription_accueil'%}{% endif%}
+                                {% if rub.url == 'soleil_inscription_paiement_return' %} {% set route = 'soleil_inscription_accueil'%}{% endif%}
+                            #}
+                               <li class="grid_2 animationLi push_li Li{{loop.index}} {% if rub.url == route %}actif{%endif%}">
+					<a href="{{ path(rub.url) }}" class="menu{{loop.index}} {% if rub.url == route %}active{%endif%}"></a>
 				</li>
 
                         {% endfor %} 
@@ -30,8 +36,8 @@
                         {% for rub in site.rubriques %}
 
                                
-                               <li class="grid_2 animationLi push_li">
-					<a href="{{ path(rub.url) }}" class="menu{{loop.index}}">{{ rub.nomFr }}</a>
+                               <li class="grid_2 animationLi push_li {% if rub.url == route %}actif{%endif%}">
+					<a href="{{ path(rub.url) }}" class="menu{{loop.index}} {% if rub.url == route %}active{%endif%}">{{ rub.nomFr }}</a>
 				</li>
                         {% endfor %} 
 

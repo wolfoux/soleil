@@ -27,7 +27,7 @@ class MailcontactType extends AbstractType
                 ))
                 
             ->add('sujet', 'text',array(
-                'label' => 'Votre Sujet *',
+                'label' => 'Votre sujet *',
                 'attr' => array('class' => 'grid_6'),
                 'required' => true
                 ))

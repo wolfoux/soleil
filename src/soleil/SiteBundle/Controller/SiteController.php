@@ -52,7 +52,7 @@ class SiteController extends Controller{
 
     }
     
-    public function menuSousSiteAction()
+    public function menuSousSiteAction($route)
     {
         
         $rubriques = $this->getDoctrine()
@@ -61,7 +61,8 @@ class SiteController extends Controller{
             ->getmenuSousSite();
         
         return $this->render('soleilSiteBundle:SousSite:menuSousSite.html.twig', array(
-            'rubriques' => $rubriques
+            'rubriques' => $rubriques,
+            'route' => $route,
         ));                     
 
     }

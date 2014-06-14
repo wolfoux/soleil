@@ -520,6 +520,8 @@ h1 {
 	list-style-image:url("img/logo_aveclesoleil_feuille.png");
 }
 
+
+
 /*=============REALISATIONS==============*/
 
 /* Modif*/
@@ -1225,6 +1227,19 @@ h1 {
 	}
 }
 
+.table-hover {
+    width:100%;
+   
+}
+
+.table-responsive{
+    overflow-x:auto;
+}
+
+.table-hover tr th{
+	color:#045604;
+}
+
 /*---------INSCRIPTION--------*/
 #inscription{
 	margin-bottom: 50px;
@@ -1869,13 +1884,4 @@ h1 {
 #copyright a:hover{
 	color: #ea940a;
 	text-decoration: underline;
-}
-
-.table-hover {
-    width:100%;
-   
-}
-
-.table-responsive{
-    overflow-x:auto;
 }

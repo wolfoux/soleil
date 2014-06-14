@@ -7,4 +7,4 @@ réalisé par : Rey Emilie - Verschoren Vanessa - Mestdag Patricia
 
 ## Documentation :
 
-Aller dans Documentation/Documentthecnique
+Aller dans Documentation/Documentthecnique.pdf

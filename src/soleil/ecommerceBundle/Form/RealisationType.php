@@ -18,7 +18,9 @@ class RealisationType extends AbstractType
             ->add('titreFr', 'text')
             ->add('titreEn', 'text')
             
-            ->add('realiserpar', 'text')
+            ->add('realiserpar', 'text', array(
+                'label' => 'Réalisé par',
+            ))
             ->add('prix')
             ->add('dimension', 'text')
                 
