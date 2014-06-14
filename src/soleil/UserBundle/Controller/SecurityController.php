@@ -38,7 +38,7 @@ class SecurityController extends BaseController
     
     protected function renderLogin(array $data)
     {
-        echo "surcharge login<br/>";
+        //echo "surcharge login<br/>";
         
         $response = parent::renderLogin($data);
         return $response;
