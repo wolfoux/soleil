@@ -45,11 +45,6 @@
     <parameter key="mailer_password">null</parameter>
     <parameter key="locale">fr</parameter>
     <parameter key="secret">htyfhd58542fkjdkfhjknjgnjk55841</parameter>
-    <parameter key="paypal_api_url">https://api-3t.sandbox.paypal.com/nvp</parameter>
-    <parameter key="paypal_api_version">114</parameter>
-    <parameter key="paypal_user">pat_marchand_api1.hotmail.com</parameter>
-    <parameter key="paypal_pass">1402126046</parameter>
-    <parameter key="paypal_signature">AFcWxV21C7fd0v3bYYYRCpSSRl31AV7kkXavicqYxVvzmVZfp90CZ5do</parameter>
     <parameter key="controller_resolver.class">Symfony\Bundle\FrameworkBundle\Controller\ControllerResolver</parameter>
     <parameter key="controller_name_converter.class">Symfony\Bundle\FrameworkBundle\Controller\ControllerNameParser</parameter>
     <parameter key="response_listener.class">Symfony\Component\HttpKernel\EventListener\ResponseListener</parameter>
@@ -422,7 +417,7 @@
     <parameter key="assetic.read_from">C:/wamp/www/aveclesoleil/app/../web</parameter>
     <parameter key="assetic.write_to">C:/wamp/www/aveclesoleil/app/../web</parameter>
     <parameter key="assetic.variables" type="collection"/>
-    <parameter key="assetic.java.bin">C:\WINDOWS\system32\java.EXE</parameter>
+    <parameter key="assetic.java.bin">C:\Windows\system32\java.EXE</parameter>
     <parameter key="assetic.node.bin">/usr/bin/node</parameter>
     <parameter key="assetic.ruby.bin">/usr/bin/ruby</parameter>
     <parameter key="assetic.sass.bin">/usr/bin/sass</parameter>
@@ -616,8 +611,8 @@
     <parameter key="jms_di_extra.disable_grep">false</parameter>
     <parameter key="jms_di_extra.doctrine_integration">true</parameter>
     <parameter key="jms_di_extra.cache_warmer.controller_file_blacklist" type="collection"/>
-    <parameter key="jms_di_extra.doctrine_integration.entity_manager.file">C:/wamp/www/aveclesoleil/app/cache/prod/jms_diextra/doctrine/EntityManager_539dd5babd875.php</parameter>
-    <parameter key="jms_di_extra.doctrine_integration.entity_manager.class">EntityManager539dd5babd875_546a8d27f194334ee012bfe64f629947b07e4919\__CG__\Doctrine\ORM\EntityManager</parameter>
+    <parameter key="jms_di_extra.doctrine_integration.entity_manager.file">C:/wamp/www/aveclesoleil/app/cache/prod/jms_diextra/doctrine/EntityManager_539deb6f91144.php</parameter>
+    <parameter key="jms_di_extra.doctrine_integration.entity_manager.class">EntityManager539deb6f91144_546a8d27f194334ee012bfe64f629947b07e4919\__CG__\Doctrine\ORM\EntityManager</parameter>
     <parameter key="console.command.ids" type="collection"/>
   </parameters>
   <services>
@@ -2739,12 +2734,12 @@
         </argument>
         <argument type="service">
           <service class="Symfony\Component\Security\Core\Authentication\Provider\AnonymousAuthenticationProvider" public="false">
-            <argument>539dd5ba6bf2b</argument>
+            <argument>539deb6f04723</argument>
           </service>
         </argument>
         <argument type="service">
           <service class="Symfony\Component\Security\Core\Authentication\Provider\AnonymousAuthenticationProvider" public="false">
-            <argument>539dd5ba6bf2b</argument>
+            <argument>539deb6f04723</argument>
           </service>
         </argument>
       </argument>
@@ -3065,7 +3060,7 @@
         <argument type="service">
           <service class="Symfony\Component\Security\Http\Firewall\AnonymousAuthenticationListener" public="false">
             <argument type="service" id="security.context"/>
-            <argument>539dd5ba6bf2b</argument>
+            <argument>539deb6f04723</argument>
             <argument type="service" id="monolog.logger.security" on-invalid="null"/>
           </service>
         </argument>
@@ -3108,7 +3103,7 @@
         <argument type="service">
           <service class="Symfony\Component\Security\Http\Firewall\AnonymousAuthenticationListener" public="false">
             <argument type="service" id="security.context"/>
-            <argument>539dd5ba6bf2b</argument>
+            <argument>539deb6f04723</argument>
             <argument type="service" id="monolog.logger.security" on-invalid="null"/>
           </service>
         </argument>
@@ -3482,8 +3477,8 @@
       <argument type="collection"/>
       <argument type="collection"/>
     </service>
-    <service id="doctrine.orm.default_entity_manager" class="EntityManager539dd5babd875_546a8d27f194334ee012bfe64f629947b07e4919\__CG__\Doctrine\ORM\EntityManager">
-      <file>C:/wamp/www/aveclesoleil/app/cache/prod/jms_diextra/doctrine/EntityManager_539dd5babd875.php</file>
+    <service id="doctrine.orm.default_entity_manager" class="EntityManager539deb6f91144_546a8d27f194334ee012bfe64f629947b07e4919\__CG__\Doctrine\ORM\EntityManager">
+      <file>C:/wamp/www/aveclesoleil/app/cache/prod/jms_diextra/doctrine/EntityManager_539deb6f91144.php</file>
       <argument type="service">
         <service class="Doctrine\ORM\EntityManager" factory-method="create" public="false">
           <argument type="service" id="doctrine.dbal.default_connection"/>
@@ -3494,7 +3489,6 @@
                   <argument key="soleilSiteBundle">soleil\SiteBundle\Entity</argument>
                   <argument key="soleilecommerceBundle">soleil\ecommerceBundle\Entity</argument>
                   <argument key="soleilAgendaBundle">soleil\AgendaBundle\Entity</argument>
-                  <argument key="soleilDonBundle">soleil\DonBundle\Entity</argument>
                   <argument key="soleilContactBundle">soleil\ContactBundle\Entity</argument>
                   <argument key="soleilArticleBundle">soleil\ArticleBundle\Entity</argument>
                   <argument key="soleilUserBundle">soleil\UserBundle\Entity</argument>
@@ -3540,7 +3534,6 @@
                             <argument>C:\wamp\www\aveclesoleil\src\soleil\SiteBundle\Entity</argument>
                             <argument>C:\wamp\www\aveclesoleil\src\soleil\ecommerceBundle\Entity</argument>
                             <argument>C:\wamp\www\aveclesoleil\src\soleil\AgendaBundle\Entity</argument>
-                            <argument>C:\wamp\www\aveclesoleil\src\soleil\DonBundle\Entity</argument>
                             <argument>C:\wamp\www\aveclesoleil\src\soleil\ContactBundle\Entity</argument>
                             <argument>C:\wamp\www\aveclesoleil\src\soleil\ArticleBundle\Entity</argument>
                             <argument>C:\wamp\www\aveclesoleil\src\soleil\UserBundle\Entity</argument>
@@ -3558,7 +3551,6 @@
                             <argument>C:\wamp\www\aveclesoleil\src\soleil\SiteBundle\Entity</argument>
                             <argument>C:\wamp\www\aveclesoleil\src\soleil\ecommerceBundle\Entity</argument>
                             <argument>C:\wamp\www\aveclesoleil\src\soleil\AgendaBundle\Entity</argument>
-                            <argument>C:\wamp\www\aveclesoleil\src\soleil\DonBundle\Entity</argument>
                             <argument>C:\wamp\www\aveclesoleil\src\soleil\ContactBundle\Entity</argument>
                             <argument>C:\wamp\www\aveclesoleil\src\soleil\ArticleBundle\Entity</argument>
                             <argument>C:\wamp\www\aveclesoleil\src\soleil\UserBundle\Entity</argument>
@@ -3576,7 +3568,6 @@
                             <argument>C:\wamp\www\aveclesoleil\src\soleil\SiteBundle\Entity</argument>
                             <argument>C:\wamp\www\aveclesoleil\src\soleil\ecommerceBundle\Entity</argument>
                             <argument>C:\wamp\www\aveclesoleil\src\soleil\AgendaBundle\Entity</argument>
-                            <argument>C:\wamp\www\aveclesoleil\src\soleil\DonBundle\Entity</argument>
                             <argument>C:\wamp\www\aveclesoleil\src\soleil\ContactBundle\Entity</argument>
                             <argument>C:\wamp\www\aveclesoleil\src\soleil\ArticleBundle\Entity</argument>
                             <argument>C:\wamp\www\aveclesoleil\src\soleil\UserBundle\Entity</argument>
@@ -3594,25 +3585,6 @@
                             <argument>C:\wamp\www\aveclesoleil\src\soleil\SiteBundle\Entity</argument>
                             <argument>C:\wamp\www\aveclesoleil\src\soleil\ecommerceBundle\Entity</argument>
                             <argument>C:\wamp\www\aveclesoleil\src\soleil\AgendaBundle\Entity</argument>
-                            <argument>C:\wamp\www\aveclesoleil\src\soleil\DonBundle\Entity</argument>
-                            <argument>C:\wamp\www\aveclesoleil\src\soleil\ContactBundle\Entity</argument>
-                            <argument>C:\wamp\www\aveclesoleil\src\soleil\ArticleBundle\Entity</argument>
-                            <argument>C:\wamp\www\aveclesoleil\src\soleil\UserBundle\Entity</argument>
-                            <argument>C:\wamp\www\aveclesoleil\src\soleil\FormationBundle\Entity</argument>
-                          </argument>
-                        </service>
-                      </argument>
-                      <argument>soleil\DonBundle\Entity</argument>
-                    </call>
-                    <call method="addDriver">
-                      <argument type="service">
-                        <service class="Doctrine\ORM\Mapping\Driver\AnnotationDriver" public="false">
-                          <argument type="service" id="annotation_reader"/>
-                          <argument type="collection">
-                            <argument>C:\wamp\www\aveclesoleil\src\soleil\SiteBundle\Entity</argument>
-                            <argument>C:\wamp\www\aveclesoleil\src\soleil\ecommerceBundle\Entity</argument>
-                            <argument>C:\wamp\www\aveclesoleil\src\soleil\AgendaBundle\Entity</argument>
-                            <argument>C:\wamp\www\aveclesoleil\src\soleil\DonBundle\Entity</argument>
                             <argument>C:\wamp\www\aveclesoleil\src\soleil\ContactBundle\Entity</argument>
                             <argument>C:\wamp\www\aveclesoleil\src\soleil\ArticleBundle\Entity</argument>
                             <argument>C:\wamp\www\aveclesoleil\src\soleil\UserBundle\Entity</argument>
@@ -3630,7 +3602,6 @@
                             <argument>C:\wamp\www\aveclesoleil\src\soleil\SiteBundle\Entity</argument>
                             <argument>C:\wamp\www\aveclesoleil\src\soleil\ecommerceBundle\Entity</argument>
                             <argument>C:\wamp\www\aveclesoleil\src\soleil\AgendaBundle\Entity</argument>
-                            <argument>C:\wamp\www\aveclesoleil\src\soleil\DonBundle\Entity</argument>
                             <argument>C:\wamp\www\aveclesoleil\src\soleil\ContactBundle\Entity</argument>
                             <argument>C:\wamp\www\aveclesoleil\src\soleil\ArticleBundle\Entity</argument>
                             <argument>C:\wamp\www\aveclesoleil\src\soleil\UserBundle\Entity</argument>
@@ -3648,7 +3619,6 @@
                             <argument>C:\wamp\www\aveclesoleil\src\soleil\SiteBundle\Entity</argument>
                             <argument>C:\wamp\www\aveclesoleil\src\soleil\ecommerceBundle\Entity</argument>
                             <argument>C:\wamp\www\aveclesoleil\src\soleil\AgendaBundle\Entity</argument>
-                            <argument>C:\wamp\www\aveclesoleil\src\soleil\DonBundle\Entity</argument>
                             <argument>C:\wamp\www\aveclesoleil\src\soleil\ContactBundle\Entity</argument>
                             <argument>C:\wamp\www\aveclesoleil\src\soleil\ArticleBundle\Entity</argument>
                             <argument>C:\wamp\www\aveclesoleil\src\soleil\UserBundle\Entity</argument>
@@ -3666,7 +3636,6 @@
                             <argument>C:\wamp\www\aveclesoleil\src\soleil\SiteBundle\Entity</argument>
                             <argument>C:\wamp\www\aveclesoleil\src\soleil\ecommerceBundle\Entity</argument>
                             <argument>C:\wamp\www\aveclesoleil\src\soleil\AgendaBundle\Entity</argument>
-                            <argument>C:\wamp\www\aveclesoleil\src\soleil\DonBundle\Entity</argument>
                             <argument>C:\wamp\www\aveclesoleil\src\soleil\ContactBundle\Entity</argument>
                             <argument>C:\wamp\www\aveclesoleil\src\soleil\ArticleBundle\Entity</argument>
                             <argument>C:\wamp\www\aveclesoleil\src\soleil\UserBundle\Entity</argument>
