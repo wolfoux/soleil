@@ -108,24 +108,15 @@ Allow from All
 
 
 <VirtualHost *:80>
-
    ServerName www.eft.com
-
    DocumentRoot "C:/wamp/www/aveclesoleil/web"
 
-
 <Directory "C:/wamp/www/aveclesoleil/web">
-
    DirectoryIndex app_dev.php
-
    Options -Indexes
-
    AllowOverride All
-
    Allow from All
-
 </Directory>
-
 </VirtualHost>
 
 
