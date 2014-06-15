@@ -27,11 +27,6 @@ class appProdUrlMatcher extends Symfony\Bundle\FrameworkBundle\Routing\Redirecta
         $context = $this->context;
         $request = $this->request;
 
-        // soleil_payement_homepage
-        if (0 === strpos($pathinfo, '/hello') && preg_match('#^/hello/(?P<name>[^/]++)$#s', $pathinfo, $matches)) {
-            return $this->mergeDefaults(array_replace($matches, array('_route' => 'soleil_payement_homepage')), array (  '_controller' => 'soleilPayementBundle:Default:index',));
-        }
-
         if (0 === strpos($pathinfo, '/a')) {
             if (0 === strpos($pathinfo, '/admin/formation')) {
                 // soleil_formation_accueil_admin

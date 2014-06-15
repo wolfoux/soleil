@@ -19,7 +19,7 @@ class InscriType extends AbstractType
            
             ->add('datenaissance','date',array('label' => 'Votre date de naissance * '))
             ->add('tel','text',array('label' => 'Votre téléphone * '))
-            ->add('mail','text',array('label' => 'Votre e-mail * '))
+            ->add('mail','email',array('label' => 'Votre e-mail * '))
                 
             ->add('genre', 'choice', array(
                 'choices'   => array(

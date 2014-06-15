@@ -1,3 +1,0 @@
-soleil_payement_homepage:
-    pattern:  /hello/{name}
-    defaults: { _controller: soleilPayementBundle:Default:index }

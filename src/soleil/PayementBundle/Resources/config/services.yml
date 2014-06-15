@@ -1,4 +1,0 @@
-services:
-    payment.plugin.paypal:
-        class: PaypalPlugin
-        tags: [{name: payment.plugin}]

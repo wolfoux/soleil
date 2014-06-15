@@ -533,11 +533,11 @@ class appProdDebugProjectContainer extends Container
      * This service is shared.
      * This method always returns the same instance of the service.
      *
-     * @return EntityManager539cccaed6cae_546a8d27f194334ee012bfe64f629947b07e4919\__CG__\Doctrine\ORM\EntityManager A EntityManager539cccaed6cae_546a8d27f194334ee012bfe64f629947b07e4919\__CG__\Doctrine\ORM\EntityManager instance.
+     * @return EntityManager539d5712b688d_546a8d27f194334ee012bfe64f629947b07e4919\__CG__\Doctrine\ORM\EntityManager A EntityManager539d5712b688d_546a8d27f194334ee012bfe64f629947b07e4919\__CG__\Doctrine\ORM\EntityManager instance.
      */
     protected function getDoctrine_Orm_DefaultEntityManagerService()
     {
-        require_once 'C:/wamp/www/aveclesoleil/app/cache/prod/jms_diextra/doctrine/EntityManager_539cccaed6cae.php';
+        require_once 'C:/wamp/www/aveclesoleil/app/cache/prod/jms_diextra/doctrine/EntityManager_539d5712b688d.php';
 
         $a = $this->get('annotation_reader');
 
@@ -550,7 +550,7 @@ class appProdDebugProjectContainer extends Container
         $d = new \Doctrine\Common\Cache\ArrayCache();
         $d->setNamespace('sf2orm_default_c70ecb326ce955e877f248b9ed7648db41b03daf2c82b3a11dfd55654dce0b5d');
 
-        $e = new \Doctrine\ORM\Mapping\Driver\AnnotationDriver($a, array(0 => 'C:\\wamp\\www\\aveclesoleil\\src\\soleil\\SiteBundle\\Entity', 1 => 'C:\\wamp\\www\\aveclesoleil\\src\\soleil\\ecommerceBundle\\Entity', 2 => 'C:\\wamp\\www\\aveclesoleil\\src\\soleil\\AgendaBundle\\Entity', 3 => 'C:\\wamp\\www\\aveclesoleil\\src\\soleil\\DonBundle\\Entity', 4 => 'C:\\wamp\\www\\aveclesoleil\\src\\soleil\\ContactBundle\\Entity', 5 => 'C:\\wamp\\www\\aveclesoleil\\src\\soleil\\ArticleBundle\\Entity', 6 => 'C:\\wamp\\www\\aveclesoleil\\src\\soleil\\UserBundle\\Entity', 7 => 'C:\\wamp\\www\\aveclesoleil\\src\\soleil\\FormationBundle\\Entity', 8 => 'C:\\wamp\\www\\aveclesoleil\\src\\soleil\\PayementBundle\\Entity'));
+        $e = new \Doctrine\ORM\Mapping\Driver\AnnotationDriver($a, array(0 => 'C:\\wamp\\www\\aveclesoleil\\src\\soleil\\SiteBundle\\Entity', 1 => 'C:\\wamp\\www\\aveclesoleil\\src\\soleil\\ecommerceBundle\\Entity', 2 => 'C:\\wamp\\www\\aveclesoleil\\src\\soleil\\AgendaBundle\\Entity', 3 => 'C:\\wamp\\www\\aveclesoleil\\src\\soleil\\DonBundle\\Entity', 4 => 'C:\\wamp\\www\\aveclesoleil\\src\\soleil\\ContactBundle\\Entity', 5 => 'C:\\wamp\\www\\aveclesoleil\\src\\soleil\\ArticleBundle\\Entity', 6 => 'C:\\wamp\\www\\aveclesoleil\\src\\soleil\\UserBundle\\Entity', 7 => 'C:\\wamp\\www\\aveclesoleil\\src\\soleil\\FormationBundle\\Entity'));
 
         $f = new \Doctrine\ORM\Mapping\Driver\SimplifiedXmlDriver(array('C:\\wamp\\www\\aveclesoleil\\vendor\\friendsofsymfony\\user-bundle\\FOS\\UserBundle\\Resources\\config\\doctrine' => 'FOS\\UserBundle\\Entity'));
         $f->setGlobalBasename('mapping');
@@ -564,12 +564,11 @@ class appProdDebugProjectContainer extends Container
         $g->addDriver($e, 'soleil\\ArticleBundle\\Entity');
         $g->addDriver($e, 'soleil\\UserBundle\\Entity');
         $g->addDriver($e, 'soleil\\FormationBundle\\Entity');
-        $g->addDriver($e, 'soleil\\PayementBundle\\Entity');
         $g->addDriver($f, 'FOS\\UserBundle\\Entity');
         $g->addDriver(new \Doctrine\ORM\Mapping\Driver\XmlDriver(new \Doctrine\Common\Persistence\Mapping\Driver\SymfonyFileLocator(array('C:\\wamp\\www\\aveclesoleil\\vendor\\friendsofsymfony\\user-bundle\\FOS\\UserBundle\\Resources\\config\\doctrine\\model' => 'FOS\\UserBundle\\Model'), '.orm.xml')), 'FOS\\UserBundle\\Model');
 
         $h = new \Doctrine\ORM\Configuration();
-        $h->setEntityNamespaces(array('soleilSiteBundle' => 'soleil\\SiteBundle\\Entity', 'soleilecommerceBundle' => 'soleil\\ecommerceBundle\\Entity', 'soleilAgendaBundle' => 'soleil\\AgendaBundle\\Entity', 'soleilDonBundle' => 'soleil\\DonBundle\\Entity', 'soleilContactBundle' => 'soleil\\ContactBundle\\Entity', 'soleilArticleBundle' => 'soleil\\ArticleBundle\\Entity', 'soleilUserBundle' => 'soleil\\UserBundle\\Entity', 'FOSUserBundle' => 'FOS\\UserBundle\\Entity', 'soleilFormationBundle' => 'soleil\\FormationBundle\\Entity', 'soleilPayementBundle' => 'soleil\\PayementBundle\\Entity'));
+        $h->setEntityNamespaces(array('soleilSiteBundle' => 'soleil\\SiteBundle\\Entity', 'soleilecommerceBundle' => 'soleil\\ecommerceBundle\\Entity', 'soleilAgendaBundle' => 'soleil\\AgendaBundle\\Entity', 'soleilDonBundle' => 'soleil\\DonBundle\\Entity', 'soleilContactBundle' => 'soleil\\ContactBundle\\Entity', 'soleilArticleBundle' => 'soleil\\ArticleBundle\\Entity', 'soleilUserBundle' => 'soleil\\UserBundle\\Entity', 'FOSUserBundle' => 'FOS\\UserBundle\\Entity', 'soleilFormationBundle' => 'soleil\\FormationBundle\\Entity'));
         $h->setMetadataCacheImpl($b);
         $h->setQueryCacheImpl($c);
         $h->setResultCacheImpl($d);
@@ -584,7 +583,7 @@ class appProdDebugProjectContainer extends Container
         $i = call_user_func(array('Doctrine\\ORM\\EntityManager', 'create'), $this->get('doctrine.dbal.default_connection'), $h);
         $this->get('doctrine.orm.default_manager_configurator')->configure($i);
 
-        return $this->services['doctrine.orm.default_entity_manager'] = new \EntityManager539cccaed6cae_546a8d27f194334ee012bfe64f629947b07e4919\__CG__\Doctrine\ORM\EntityManager($i, $this);
+        return $this->services['doctrine.orm.default_entity_manager'] = new \EntityManager539d5712b688d_546a8d27f194334ee012bfe64f629947b07e4919\__CG__\Doctrine\ORM\EntityManager($i, $this);
     }
 
     /**
@@ -1221,7 +1220,7 @@ class appProdDebugProjectContainer extends Container
      */
     protected function getFosJsRouting_ExtractorService()
     {
-        return $this->services['fos_js_routing.extractor'] = new \FOS\JsRoutingBundle\Extractor\ExposedRoutesExtractor($this->get('router'), array(), 'C:/wamp/www/aveclesoleil/app/cache/prod', array('FrameworkBundle' => 'Symfony\\Bundle\\FrameworkBundle\\FrameworkBundle', 'SecurityBundle' => 'Symfony\\Bundle\\SecurityBundle\\SecurityBundle', 'TwigBundle' => 'Symfony\\Bundle\\TwigBundle\\TwigBundle', 'MonologBundle' => 'Symfony\\Bundle\\MonologBundle\\MonologBundle', 'SwiftmailerBundle' => 'Symfony\\Bundle\\SwiftmailerBundle\\SwiftmailerBundle', 'AsseticBundle' => 'Symfony\\Bundle\\AsseticBundle\\AsseticBundle', 'DoctrineBundle' => 'Doctrine\\Bundle\\DoctrineBundle\\DoctrineBundle', 'SensioFrameworkExtraBundle' => 'Sensio\\Bundle\\FrameworkExtraBundle\\SensioFrameworkExtraBundle', 'soleilSiteBundle' => 'soleil\\SiteBundle\\soleilSiteBundle', 'FOSJsRoutingBundle' => 'FOS\\JsRoutingBundle\\FOSJsRoutingBundle', 'soleilecommerceBundle' => 'soleil\\ecommerceBundle\\soleilecommerceBundle', 'soleilAgendaBundle' => 'soleil\\AgendaBundle\\soleilAgendaBundle', 'soleilDonBundle' => 'soleil\\DonBundle\\soleilDonBundle', 'soleilContactBundle' => 'soleil\\ContactBundle\\soleilContactBundle', 'soleilArticleBundle' => 'soleil\\ArticleBundle\\soleilArticleBundle', 'soleilUserBundle' => 'soleil\\UserBundle\\soleilUserBundle', 'JMSAopBundle' => 'JMS\\AopBundle\\JMSAopBundle', 'JMSSecurityExtraBundle' => 'JMS\\SecurityExtraBundle\\JMSSecurityExtraBundle', 'StofDoctrineExtensionsBundle' => 'Stof\\DoctrineExtensionsBundle\\StofDoctrineExtensionsBundle', 'FOSUserBundle' => 'FOS\\UserBundle\\FOSUserBundle', 'soleilFormationBundle' => 'soleil\\FormationBundle\\soleilFormationBundle', 'soleilPayementBundle' => 'soleil\\PayementBundle\\soleilPayementBundle', 'JMSDiExtraBundle' => 'JMS\\DiExtraBundle\\JMSDiExtraBundle'));
+        return $this->services['fos_js_routing.extractor'] = new \FOS\JsRoutingBundle\Extractor\ExposedRoutesExtractor($this->get('router'), array(), 'C:/wamp/www/aveclesoleil/app/cache/prod', array('FrameworkBundle' => 'Symfony\\Bundle\\FrameworkBundle\\FrameworkBundle', 'SecurityBundle' => 'Symfony\\Bundle\\SecurityBundle\\SecurityBundle', 'TwigBundle' => 'Symfony\\Bundle\\TwigBundle\\TwigBundle', 'MonologBundle' => 'Symfony\\Bundle\\MonologBundle\\MonologBundle', 'SwiftmailerBundle' => 'Symfony\\Bundle\\SwiftmailerBundle\\SwiftmailerBundle', 'AsseticBundle' => 'Symfony\\Bundle\\AsseticBundle\\AsseticBundle', 'DoctrineBundle' => 'Doctrine\\Bundle\\DoctrineBundle\\DoctrineBundle', 'SensioFrameworkExtraBundle' => 'Sensio\\Bundle\\FrameworkExtraBundle\\SensioFrameworkExtraBundle', 'soleilSiteBundle' => 'soleil\\SiteBundle\\soleilSiteBundle', 'FOSJsRoutingBundle' => 'FOS\\JsRoutingBundle\\FOSJsRoutingBundle', 'soleilecommerceBundle' => 'soleil\\ecommerceBundle\\soleilecommerceBundle', 'soleilAgendaBundle' => 'soleil\\AgendaBundle\\soleilAgendaBundle', 'soleilDonBundle' => 'soleil\\DonBundle\\soleilDonBundle', 'soleilContactBundle' => 'soleil\\ContactBundle\\soleilContactBundle', 'soleilArticleBundle' => 'soleil\\ArticleBundle\\soleilArticleBundle', 'soleilUserBundle' => 'soleil\\UserBundle\\soleilUserBundle', 'JMSAopBundle' => 'JMS\\AopBundle\\JMSAopBundle', 'JMSSecurityExtraBundle' => 'JMS\\SecurityExtraBundle\\JMSSecurityExtraBundle', 'StofDoctrineExtensionsBundle' => 'Stof\\DoctrineExtensionsBundle\\StofDoctrineExtensionsBundle', 'FOSUserBundle' => 'FOS\\UserBundle\\FOSUserBundle', 'soleilFormationBundle' => 'soleil\\FormationBundle\\soleilFormationBundle', 'JMSDiExtraBundle' => 'JMS\\DiExtraBundle\\JMSDiExtraBundle'));
     }
 
     /**
@@ -2206,7 +2205,7 @@ class appProdDebugProjectContainer extends Container
         $k = new \Symfony\Component\Security\Http\Firewall\UsernamePasswordFormAuthenticationListener($a, $g, $this->get('security.authentication.session_strategy'), $e, 'main', $j, new \Symfony\Component\Security\Http\Authentication\DefaultAuthenticationFailureHandler($f, $e, array('login_path' => 'fos_user_security_login', 'failure_path' => NULL, 'failure_forward' => false, 'failure_path_parameter' => '_failure_path'), $c), array('check_path' => 'fos_user_security_check', 'use_forward' => false, 'require_previous_session' => true, 'username_parameter' => '_username', 'password_parameter' => '_password', 'csrf_parameter' => '_csrf_token', 'intention' => 'authenticate', 'post_only' => true), $c, $d, NULL);
         $k->setRememberMeServices($h);
 
-        return $this->services['security.firewall.map.context.main'] = new \Symfony\Bundle\SecurityBundle\Security\FirewallContext(array(0 => $this->get('security.channel_listener'), 1 => new \Symfony\Component\Security\Http\Firewall\ContextListener($a, array(0 => $b), 'main', $c, $d), 2 => $i, 3 => $k, 4 => new \Symfony\Component\Security\Http\Firewall\RememberMeListener($a, $h, $g, $c, $d), 5 => new \Symfony\Component\Security\Http\Firewall\AnonymousAuthenticationListener($a, '539cccae8a2ea', $c), 6 => $this->get('security.access_listener')), new \Symfony\Component\Security\Http\Firewall\ExceptionListener($a, $this->get('security.authentication.trust_resolver'), $e, 'main', new \Symfony\Component\Security\Http\EntryPoint\FormAuthenticationEntryPoint($f, $e, 'fos_user_security_login', false), NULL, NULL, $c));
+        return $this->services['security.firewall.map.context.main'] = new \Symfony\Bundle\SecurityBundle\Security\FirewallContext(array(0 => $this->get('security.channel_listener'), 1 => new \Symfony\Component\Security\Http\Firewall\ContextListener($a, array(0 => $b), 'main', $c, $d), 2 => $i, 3 => $k, 4 => new \Symfony\Component\Security\Http\Firewall\RememberMeListener($a, $h, $g, $c, $d), 5 => new \Symfony\Component\Security\Http\Firewall\AnonymousAuthenticationListener($a, '539d571272f1e', $c), 6 => $this->get('security.access_listener')), new \Symfony\Component\Security\Http\Firewall\ExceptionListener($a, $this->get('security.authentication.trust_resolver'), $e, 'main', new \Symfony\Component\Security\Http\EntryPoint\FormAuthenticationEntryPoint($f, $e, 'fos_user_security_login', false), NULL, NULL, $c));
     }
 
     /**
@@ -2222,7 +2221,7 @@ class appProdDebugProjectContainer extends Container
         $a = $this->get('security.context');
         $b = $this->get('monolog.logger.security', ContainerInterface::NULL_ON_INVALID_REFERENCE);
 
-        return $this->services['security.firewall.map.context.main_login'] = new \Symfony\Bundle\SecurityBundle\Security\FirewallContext(array(0 => $this->get('security.channel_listener'), 1 => new \Symfony\Component\Security\Http\Firewall\ContextListener($a, array(0 => $this->get('fos_user.user_provider.username')), 'main_login', $b, $this->get('debug.event_dispatcher', ContainerInterface::NULL_ON_INVALID_REFERENCE)), 2 => new \Symfony\Component\Security\Http\Firewall\AnonymousAuthenticationListener($a, '539cccae8a2ea', $b), 3 => $this->get('security.access_listener')), new \Symfony\Component\Security\Http\Firewall\ExceptionListener($a, $this->get('security.authentication.trust_resolver'), $this->get('security.http_utils'), 'main_login', NULL, NULL, NULL, $b));
+        return $this->services['security.firewall.map.context.main_login'] = new \Symfony\Bundle\SecurityBundle\Security\FirewallContext(array(0 => $this->get('security.channel_listener'), 1 => new \Symfony\Component\Security\Http\Firewall\ContextListener($a, array(0 => $this->get('fos_user.user_provider.username')), 'main_login', $b, $this->get('debug.event_dispatcher', ContainerInterface::NULL_ON_INVALID_REFERENCE)), 2 => new \Symfony\Component\Security\Http\Firewall\AnonymousAuthenticationListener($a, '539d571272f1e', $b), 3 => $this->get('security.access_listener')), new \Symfony\Component\Security\Http\Firewall\ExceptionListener($a, $this->get('security.authentication.trust_resolver'), $this->get('security.http_utils'), 'main_login', NULL, NULL, NULL, $b));
     }
 
     /**
@@ -3418,7 +3417,6 @@ class appProdDebugProjectContainer extends Container
         $instance->addResource('yml', 'C:\\wamp\\www\\aveclesoleil\\vendor\\friendsofsymfony\\user-bundle\\FOS\\UserBundle/Resources/translations\\validators.vi.yml', 'vi', 'validators');
         $instance->addResource('yml', 'C:\\wamp\\www\\aveclesoleil\\vendor\\friendsofsymfony\\user-bundle\\FOS\\UserBundle/Resources/translations\\validators.zh_CN.yml', 'zh_CN', 'validators');
         $instance->addResource('xlf', 'C:\\wamp\\www\\aveclesoleil\\src\\soleil\\FormationBundle/Resources/translations\\messages.fr.xlf', 'fr', 'messages');
-        $instance->addResource('xlf', 'C:\\wamp\\www\\aveclesoleil\\src\\soleil\\PayementBundle/Resources/translations\\messages.fr.xlf', 'fr', 'messages');
 
         return $instance;
     }
@@ -3510,7 +3508,6 @@ class appProdDebugProjectContainer extends Container
         $instance->addPath('C:\\wamp\\www\\aveclesoleil\\src\\soleil\\UserBundle/Resources/views', 'soleilUser');
         $instance->addPath('C:\\wamp\\www\\aveclesoleil\\vendor\\friendsofsymfony\\user-bundle\\FOS\\UserBundle/Resources/views', 'FOSUser');
         $instance->addPath('C:\\wamp\\www\\aveclesoleil\\src\\soleil\\FormationBundle/Resources/views', 'soleilFormation');
-        $instance->addPath('C:\\wamp\\www\\aveclesoleil\\src\\soleil\\PayementBundle/Resources/views', 'soleilPayement');
         $instance->addPath('C:/wamp/www/aveclesoleil/app/Resources/views');
         $instance->addPath('C:\\wamp\\www\\aveclesoleil\\vendor\\symfony\\symfony\\src\\Symfony\\Bridge\\Twig/Resources/views/Form');
 
@@ -3708,7 +3705,7 @@ class appProdDebugProjectContainer extends Container
     {
         $a = $this->get('security.user_checker');
 
-        $this->services['security.authentication.manager'] = $instance = new \Symfony\Component\Security\Core\Authentication\AuthenticationProviderManager(array(0 => new \Symfony\Component\Security\Core\Authentication\Provider\DaoAuthenticationProvider($this->get('fos_user.user_provider.username'), $a, 'main', $this->get('security.encoder_factory'), true), 1 => new \Symfony\Component\Security\Core\Authentication\Provider\RememberMeAuthenticationProvider($a, 'htyfhd58542fkjdkfhjknjgnjk55841', 'main'), 2 => new \Symfony\Component\Security\Core\Authentication\Provider\AnonymousAuthenticationProvider('539cccae8a2ea'), 3 => new \Symfony\Component\Security\Core\Authentication\Provider\AnonymousAuthenticationProvider('539cccae8a2ea')), true);
+        $this->services['security.authentication.manager'] = $instance = new \Symfony\Component\Security\Core\Authentication\AuthenticationProviderManager(array(0 => new \Symfony\Component\Security\Core\Authentication\Provider\DaoAuthenticationProvider($this->get('fos_user.user_provider.username'), $a, 'main', $this->get('security.encoder_factory'), true), 1 => new \Symfony\Component\Security\Core\Authentication\Provider\RememberMeAuthenticationProvider($a, 'htyfhd58542fkjdkfhjknjgnjk55841', 'main'), 2 => new \Symfony\Component\Security\Core\Authentication\Provider\AnonymousAuthenticationProvider('539d571272f1e'), 3 => new \Symfony\Component\Security\Core\Authentication\Provider\AnonymousAuthenticationProvider('539d571272f1e')), true);
 
         $instance->setEventDispatcher($this->get('debug.event_dispatcher'));
 
@@ -3971,7 +3968,6 @@ class appProdDebugProjectContainer extends Container
                 'StofDoctrineExtensionsBundle' => 'Stof\\DoctrineExtensionsBundle\\StofDoctrineExtensionsBundle',
                 'FOSUserBundle' => 'FOS\\UserBundle\\FOSUserBundle',
                 'soleilFormationBundle' => 'soleil\\FormationBundle\\soleilFormationBundle',
-                'soleilPayementBundle' => 'soleil\\PayementBundle\\soleilPayementBundle',
                 'JMSDiExtraBundle' => 'JMS\\DiExtraBundle\\JMSDiExtraBundle',
             ),
             'kernel.charset' => 'UTF-8',
@@ -4597,8 +4593,8 @@ class appProdDebugProjectContainer extends Container
             'jms_di_extra.cache_warmer.controller_file_blacklist' => array(
 
             ),
-            'jms_di_extra.doctrine_integration.entity_manager.file' => 'C:/wamp/www/aveclesoleil/app/cache/prod/jms_diextra/doctrine/EntityManager_539cccaed6cae.php',
-            'jms_di_extra.doctrine_integration.entity_manager.class' => 'EntityManager539cccaed6cae_546a8d27f194334ee012bfe64f629947b07e4919\\__CG__\\Doctrine\\ORM\\EntityManager',
+            'jms_di_extra.doctrine_integration.entity_manager.file' => 'C:/wamp/www/aveclesoleil/app/cache/prod/jms_diextra/doctrine/EntityManager_539d5712b688d.php',
+            'jms_di_extra.doctrine_integration.entity_manager.class' => 'EntityManager539d5712b688d_546a8d27f194334ee012bfe64f629947b07e4919\\__CG__\\Doctrine\\ORM\\EntityManager',
             'console.command.ids' => array(
 
             ),

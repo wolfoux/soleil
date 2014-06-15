@@ -29,7 +29,6 @@
       <parameter key="StofDoctrineExtensionsBundle">Stof\DoctrineExtensionsBundle\StofDoctrineExtensionsBundle</parameter>
       <parameter key="FOSUserBundle">FOS\UserBundle\FOSUserBundle</parameter>
       <parameter key="soleilFormationBundle">soleil\FormationBundle\soleilFormationBundle</parameter>
-      <parameter key="soleilPayementBundle">soleil\PayementBundle\soleilPayementBundle</parameter>
       <parameter key="JMSDiExtraBundle">JMS\DiExtraBundle\JMSDiExtraBundle</parameter>
     </parameter>
     <parameter key="kernel.charset">UTF-8</parameter>
@@ -617,8 +616,8 @@
     <parameter key="jms_di_extra.disable_grep">false</parameter>
     <parameter key="jms_di_extra.doctrine_integration">true</parameter>
     <parameter key="jms_di_extra.cache_warmer.controller_file_blacklist" type="collection"/>
-    <parameter key="jms_di_extra.doctrine_integration.entity_manager.file">C:/wamp/www/aveclesoleil/app/cache/prod/jms_diextra/doctrine/EntityManager_539cccaed6cae.php</parameter>
-    <parameter key="jms_di_extra.doctrine_integration.entity_manager.class">EntityManager539cccaed6cae_546a8d27f194334ee012bfe64f629947b07e4919\__CG__\Doctrine\ORM\EntityManager</parameter>
+    <parameter key="jms_di_extra.doctrine_integration.entity_manager.file">C:/wamp/www/aveclesoleil/app/cache/prod/jms_diextra/doctrine/EntityManager_539d5712b688d.php</parameter>
+    <parameter key="jms_di_extra.doctrine_integration.entity_manager.class">EntityManager539d5712b688d_546a8d27f194334ee012bfe64f629947b07e4919\__CG__\Doctrine\ORM\EntityManager</parameter>
     <parameter key="console.command.ids" type="collection"/>
   </parameters>
   <services>
@@ -1975,12 +1974,6 @@
         <argument>fr</argument>
         <argument>messages</argument>
       </call>
-      <call method="addResource">
-        <argument>xlf</argument>
-        <argument>C:\wamp\www\aveclesoleil\src\soleil\PayementBundle/Resources/translations\messages.fr.xlf</argument>
-        <argument>fr</argument>
-        <argument>messages</argument>
-      </call>
     </service>
     <service id="translation.loader.php" class="Symfony\Component\Translation\Loader\PhpFileLoader">
       <tag name="translation.loader" alias="php"/>
@@ -2746,12 +2739,12 @@
         </argument>
         <argument type="service">
           <service class="Symfony\Component\Security\Core\Authentication\Provider\AnonymousAuthenticationProvider" public="false">
-            <argument>539cccae8a2ea</argument>
+            <argument>539d571272f1e</argument>
           </service>
         </argument>
         <argument type="service">
           <service class="Symfony\Component\Security\Core\Authentication\Provider\AnonymousAuthenticationProvider" public="false">
-            <argument>539cccae8a2ea</argument>
+            <argument>539d571272f1e</argument>
           </service>
         </argument>
       </argument>
@@ -3072,7 +3065,7 @@
         <argument type="service">
           <service class="Symfony\Component\Security\Http\Firewall\AnonymousAuthenticationListener" public="false">
             <argument type="service" id="security.context"/>
-            <argument>539cccae8a2ea</argument>
+            <argument>539d571272f1e</argument>
             <argument type="service" id="monolog.logger.security" on-invalid="null"/>
           </service>
         </argument>
@@ -3115,7 +3108,7 @@
         <argument type="service">
           <service class="Symfony\Component\Security\Http\Firewall\AnonymousAuthenticationListener" public="false">
             <argument type="service" id="security.context"/>
-            <argument>539cccae8a2ea</argument>
+            <argument>539d571272f1e</argument>
             <argument type="service" id="monolog.logger.security" on-invalid="null"/>
           </service>
         </argument>
@@ -3489,8 +3482,8 @@
       <argument type="collection"/>
       <argument type="collection"/>
     </service>
-    <service id="doctrine.orm.default_entity_manager" class="EntityManager539cccaed6cae_546a8d27f194334ee012bfe64f629947b07e4919\__CG__\Doctrine\ORM\EntityManager">
-      <file>C:/wamp/www/aveclesoleil/app/cache/prod/jms_diextra/doctrine/EntityManager_539cccaed6cae.php</file>
+    <service id="doctrine.orm.default_entity_manager" class="EntityManager539d5712b688d_546a8d27f194334ee012bfe64f629947b07e4919\__CG__\Doctrine\ORM\EntityManager">
+      <file>C:/wamp/www/aveclesoleil/app/cache/prod/jms_diextra/doctrine/EntityManager_539d5712b688d.php</file>
       <argument type="service">
         <service class="Doctrine\ORM\EntityManager" factory-method="create" public="false">
           <argument type="service" id="doctrine.dbal.default_connection"/>
@@ -3507,7 +3500,6 @@
                   <argument key="soleilUserBundle">soleil\UserBundle\Entity</argument>
                   <argument key="FOSUserBundle">FOS\UserBundle\Entity</argument>
                   <argument key="soleilFormationBundle">soleil\FormationBundle\Entity</argument>
-                  <argument key="soleilPayementBundle">soleil\PayementBundle\Entity</argument>
                 </argument>
               </call>
               <call method="setMetadataCacheImpl">
@@ -3553,7 +3545,6 @@
                             <argument>C:\wamp\www\aveclesoleil\src\soleil\ArticleBundle\Entity</argument>
                             <argument>C:\wamp\www\aveclesoleil\src\soleil\UserBundle\Entity</argument>
                             <argument>C:\wamp\www\aveclesoleil\src\soleil\FormationBundle\Entity</argument>
-                            <argument>C:\wamp\www\aveclesoleil\src\soleil\PayementBundle\Entity</argument>
                           </argument>
                         </service>
                       </argument>
@@ -3572,7 +3563,6 @@
                             <argument>C:\wamp\www\aveclesoleil\src\soleil\ArticleBundle\Entity</argument>
                             <argument>C:\wamp\www\aveclesoleil\src\soleil\UserBundle\Entity</argument>
                             <argument>C:\wamp\www\aveclesoleil\src\soleil\FormationBundle\Entity</argument>
-                            <argument>C:\wamp\www\aveclesoleil\src\soleil\PayementBundle\Entity</argument>
                           </argument>
                         </service>
                       </argument>
@@ -3591,7 +3581,6 @@
                             <argument>C:\wamp\www\aveclesoleil\src\soleil\ArticleBundle\Entity</argument>
                             <argument>C:\wamp\www\aveclesoleil\src\soleil\UserBundle\Entity</argument>
                             <argument>C:\wamp\www\aveclesoleil\src\soleil\FormationBundle\Entity</argument>
-                            <argument>C:\wamp\www\aveclesoleil\src\soleil\PayementBundle\Entity</argument>
                           </argument>
                         </service>
                       </argument>
@@ -3610,7 +3599,6 @@
                             <argument>C:\wamp\www\aveclesoleil\src\soleil\ArticleBundle\Entity</argument>
                             <argument>C:\wamp\www\aveclesoleil\src\soleil\UserBundle\Entity</argument>
                             <argument>C:\wamp\www\aveclesoleil\src\soleil\FormationBundle\Entity</argument>
-                            <argument>C:\wamp\www\aveclesoleil\src\soleil\PayementBundle\Entity</argument>
                           </argument>
                         </service>
                       </argument>
@@ -3629,7 +3617,6 @@
                             <argument>C:\wamp\www\aveclesoleil\src\soleil\ArticleBundle\Entity</argument>
                             <argument>C:\wamp\www\aveclesoleil\src\soleil\UserBundle\Entity</argument>
                             <argument>C:\wamp\www\aveclesoleil\src\soleil\FormationBundle\Entity</argument>
-                            <argument>C:\wamp\www\aveclesoleil\src\soleil\PayementBundle\Entity</argument>
                           </argument>
                         </service>
                       </argument>
@@ -3648,7 +3635,6 @@
                             <argument>C:\wamp\www\aveclesoleil\src\soleil\ArticleBundle\Entity</argument>
                             <argument>C:\wamp\www\aveclesoleil\src\soleil\UserBundle\Entity</argument>
                             <argument>C:\wamp\www\aveclesoleil\src\soleil\FormationBundle\Entity</argument>
-                            <argument>C:\wamp\www\aveclesoleil\src\soleil\PayementBundle\Entity</argument>
                           </argument>
                         </service>
                       </argument>
@@ -3667,7 +3653,6 @@
                             <argument>C:\wamp\www\aveclesoleil\src\soleil\ArticleBundle\Entity</argument>
                             <argument>C:\wamp\www\aveclesoleil\src\soleil\UserBundle\Entity</argument>
                             <argument>C:\wamp\www\aveclesoleil\src\soleil\FormationBundle\Entity</argument>
-                            <argument>C:\wamp\www\aveclesoleil\src\soleil\PayementBundle\Entity</argument>
                           </argument>
                         </service>
                       </argument>
@@ -3686,30 +3671,10 @@
                             <argument>C:\wamp\www\aveclesoleil\src\soleil\ArticleBundle\Entity</argument>
                             <argument>C:\wamp\www\aveclesoleil\src\soleil\UserBundle\Entity</argument>
                             <argument>C:\wamp\www\aveclesoleil\src\soleil\FormationBundle\Entity</argument>
-                            <argument>C:\wamp\www\aveclesoleil\src\soleil\PayementBundle\Entity</argument>
                           </argument>
                         </service>
                       </argument>
                       <argument>soleil\FormationBundle\Entity</argument>
-                    </call>
-                    <call method="addDriver">
-                      <argument type="service">
-                        <service class="Doctrine\ORM\Mapping\Driver\AnnotationDriver" public="false">
-                          <argument type="service" id="annotation_reader"/>
-                          <argument type="collection">
-                            <argument>C:\wamp\www\aveclesoleil\src\soleil\SiteBundle\Entity</argument>
-                            <argument>C:\wamp\www\aveclesoleil\src\soleil\ecommerceBundle\Entity</argument>
-                            <argument>C:\wamp\www\aveclesoleil\src\soleil\AgendaBundle\Entity</argument>
-                            <argument>C:\wamp\www\aveclesoleil\src\soleil\DonBundle\Entity</argument>
-                            <argument>C:\wamp\www\aveclesoleil\src\soleil\ContactBundle\Entity</argument>
-                            <argument>C:\wamp\www\aveclesoleil\src\soleil\ArticleBundle\Entity</argument>
-                            <argument>C:\wamp\www\aveclesoleil\src\soleil\UserBundle\Entity</argument>
-                            <argument>C:\wamp\www\aveclesoleil\src\soleil\FormationBundle\Entity</argument>
-                            <argument>C:\wamp\www\aveclesoleil\src\soleil\PayementBundle\Entity</argument>
-                          </argument>
-                        </service>
-                      </argument>
-                      <argument>soleil\PayementBundle\Entity</argument>
                     </call>
                     <call method="addDriver">
                       <argument type="service">
@@ -3841,7 +3806,6 @@
         <argument key="StofDoctrineExtensionsBundle">Stof\DoctrineExtensionsBundle\StofDoctrineExtensionsBundle</argument>
         <argument key="FOSUserBundle">FOS\UserBundle\FOSUserBundle</argument>
         <argument key="soleilFormationBundle">soleil\FormationBundle\soleilFormationBundle</argument>
-        <argument key="soleilPayementBundle">soleil\PayementBundle\soleilPayementBundle</argument>
         <argument key="JMSDiExtraBundle">JMS\DiExtraBundle\JMSDiExtraBundle</argument>
       </argument>
     </service>
@@ -4308,10 +4272,6 @@
       <call method="addPath">
         <argument>C:\wamp\www\aveclesoleil\src\soleil\FormationBundle/Resources/views</argument>
         <argument>soleilFormation</argument>
-      </call>
-      <call method="addPath">
-        <argument>C:\wamp\www\aveclesoleil\src\soleil\PayementBundle/Resources/views</argument>
-        <argument>soleilPayement</argument>
       </call>
       <call method="addPath">
         <argument>C:/wamp/www/aveclesoleil/app/Resources/views</argument>
