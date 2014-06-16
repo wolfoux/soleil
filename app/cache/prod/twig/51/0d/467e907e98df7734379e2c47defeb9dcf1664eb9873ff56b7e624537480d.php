@@ -108,7 +108,11 @@ class __TwigTemplate_510d467e907e98df7734379e2c47defeb9dcf1664eb9873ff56b7e62453
 
 \t\t\t</section>
 \t</section>
+<<<<<<< HEAD
 </section>   
+=======
+</section>     
+>>>>>>> 186d2ec13980c83f1e634b1fcd793739f85d4f97
 </section>
 ";
     }

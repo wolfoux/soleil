@@ -263,6 +263,10 @@ Symfony\Component\DependencyInjection\Compiler\InlineServiceDefinitionsPass: Inl
 Symfony\Component\DependencyInjection\Compiler\InlineServiceDefinitionsPass: Inlined service "doctrine.orm.default_annotation_metadata_driver" to "doctrine.orm.default_metadata_driver".
 Symfony\Component\DependencyInjection\Compiler\InlineServiceDefinitionsPass: Inlined service "doctrine.orm.default_annotation_metadata_driver" to "doctrine.orm.default_metadata_driver".
 Symfony\Component\DependencyInjection\Compiler\InlineServiceDefinitionsPass: Inlined service "doctrine.orm.default_annotation_metadata_driver" to "doctrine.orm.default_metadata_driver".
+<<<<<<< HEAD
+=======
+Symfony\Component\DependencyInjection\Compiler\InlineServiceDefinitionsPass: Inlined service "doctrine.orm.default_annotation_metadata_driver" to "doctrine.orm.default_metadata_driver".
+>>>>>>> 186d2ec13980c83f1e634b1fcd793739f85d4f97
 Symfony\Component\DependencyInjection\Compiler\InlineServiceDefinitionsPass: Inlined service "doctrine.orm.default_xml_metadata_driver" to "doctrine.orm.default_metadata_driver".
 Symfony\Component\DependencyInjection\Compiler\InlineServiceDefinitionsPass: Inlined service "doctrine.orm.default_entity_manager.delegate" to "doctrine.orm.default_entity_manager".
 Symfony\Component\DependencyInjection\Compiler\InlineServiceDefinitionsPass: Inlined service "sensio_framework_extra.security.expression_language" to "sensio_framework_extra.security.listener".
