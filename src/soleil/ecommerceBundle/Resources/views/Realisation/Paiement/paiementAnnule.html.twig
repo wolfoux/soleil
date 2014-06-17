@@ -1,0 +1,47 @@
+{#DESCRIPTION :       
+  paiement annuler
+
+    Nom du Bundle: soleilArticleBundle
+    Controller: Payement
+    Action    : cancel
+    ----------------------------------------------
+
+    A INTEGRER : 
+        extends "::SousSite/base.html.twig"
+
+    POUR LE LIENS:
+    Route: soleil_realisation_paiement_cancel
+          
+
+    ----------------------------------------------                
+    POUR TESTER : www.eft.com/realisation/achat/paiement/cancel
+    ----------------------------------------------
+#}
+
+{% extends "::SousSite/base.html.twig" %}
+
+{% block content %}
+
+<section id="etage2" class="alignement_etage2">
+	<section id="contenu" class="container">
+
+			<section id="don" class="grid_12 alpha omega">
+
+               <h2 class="alignement_h2_etage2">Inscription</h2>
+
+				<form id="formulaire-don-confirmation">
+                                        <fieldset class="grid_12" id="don-confirmation">
+							<h3>Paiement annulé</h3>
+							<h4>Le paiement a été annulé.</h4>
+                                                        <h4>En espérant que vous changerez d'avis, nous vous adressons nos salutations les plus sincères.</h4>
+
+						
+					</fieldset>
+				</form>
+			</section>
+	</section>
+</section>
+
+
+</section>       
+{% endblock %}

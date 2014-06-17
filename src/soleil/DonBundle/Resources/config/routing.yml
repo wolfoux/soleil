@@ -1,0 +1,11 @@
+#DON
+soleil_don_accueil:
+    pattern:  /don
+    defaults: { _controller: soleilDonBundle:Don:index }
+    
+#ADMINISTRATION
+
+soleil_don_accueil_admin:
+  pattern : /admin/don
+  defaults: { _controller: soleilDonBundle:Don:don }
+

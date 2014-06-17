@@ -1,0 +1,61 @@
+{#DESCRIPTION :       
+    admin, voir un article
+
+    Nom du Bundle: soleilArticleBundle
+    Controller: Article
+    Action    : voir
+    ----------------------------------------------
+
+    A INTEGRER : 
+        extends "::SousSite/base.html.twig"
+
+    POUR LE LIENS:
+    Route: soleil_article_voir_admin
+          
+
+    VARIABLES DISPONIBLES:
+        - article: OBJ :  article
+                     propriétés : id, titreFr, titreEn, textFr, textEn, date, dateEdition, slug, site_id, image_id, video
+                     
+
+    ----------------------------------------------                
+    POUR TESTER : www.eft.com/admin/article/{slug}/voir
+    ----------------------------------------------
+#}
+
+{% extends "::SousSite/Admin/baseAdmin.html.twig" %}
+
+{% block content %}
+        
+    <div class="row">
+
+              <div class="col-lg-12">
+                <h1>Agenda</h1>
+                <ol class="breadcrumb">
+                  <li><a href="{{ path('soleil_sous_site_accueil_admin') }}"><i class="fa fa-dashboard"></i> Accueil</a></li>
+                  <li><a href="{{ path('soleil_article_accueil_admin') }}"><i class="fa fa-pencil"></i></i> Article</a></li>
+                  <li class="active">Voir</li>
+                </ol>
+              </div>
+
+      </div><!-- /.row -->
+    
+    <a href="{{ path('soleil_article_modifier_admin', {'slug': article.slug} ) }}">Modifier</a> 
+    <a href="{{ path('soleil_article_supprimer_admin', {'slug': article.slug} ) }}">Supprimer</a>
+    
+    <br/><br/>
+    
+    {% if article.image is not null%}
+        <img src="{{ asset(article.image.webPath) }}" alt="{{ article.image.alt }}" /> <br/>
+    {% elseif article.video is not null%}
+        <iframe width="298" height="200" src="{{ article.video }}" allowfullscreen class="grid_4bis alpha omega"></iframe><br/>
+    {% endif %}
+        
+        
+    {{ article.titreFr }} <br/>  
+    {{ article.textFr|raw }} 
+    
+    {{ article.titreEn }} <br/>  
+    {{ article.textEn|raw }}
+
+{% endblock %}

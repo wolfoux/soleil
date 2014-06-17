@@ -1,0 +1,36 @@
+{#DESCRIPTION :       
+  admin, supprimer une realisation
+
+    Nom du Bundle: soleilArticleBundle
+    Controller: Formation
+    Action    : index
+    ----------------------------------------------
+
+    
+    VARIABLES DISPONIBLES:
+        - commande: obj:  commande
+                     propriétés : id, titreFr, titreEn,textFr; textEn, slug, date, dateEdition
+       
+    ----------------------------------------------                
+    POUR TESTER : www.eft.com/
+    ---------------------------------------------- #}     
+<article class='colo_info'>
+    
+    {% if formations is empty %}   
+    
+        <h2>Formations</h2>
+        <p>Aucune formation disponible pour le moment</p>
+        
+    {% else %}
+        
+        {% for f in formations %} 
+               <article class='colo_info'>
+                    <h2>{{ f.titreFr }}</h2>
+                    {{ f.textFr|raw }} 
+               </article>
+
+        {% endfor %}
+           
+    {% endif%}
+   
+</article>

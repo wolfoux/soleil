@@ -1,0 +1,102 @@
+{#DESCRIPTION :       
+  admin, liste des formations 
+
+    Nom du Bundle: soleilArticleBundle
+    Controller: Site
+    Action    : footer
+    ----------------------------------------------
+
+    POUR LE LIENS:
+    Route: soleil_sous_site_accueil
+
+    VARIABLES DISPONIBLES:
+        - contact: obj: contact
+                     propriétés : id, mail, nom, tel, gsm
+       
+    ----------------------------------------------                
+    POUR TESTER : www.eft.com
+    ----------------------------------------------  
+#}
+<section id="etage3">
+	<footer id="pied" class="container">
+		<article id="faites-un-don" class="grid_3bis alpha omega">
+			<h2>Aidez-nous</h2>
+			<div id="boutonResponsive">
+				<div class="box" style="border-radius:8px;">
+					<p>
+						<a href="{{ path('soleil_don_accueil') }}"> 
+							<svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" style="border-radius:5px;">
+								<line class="top" x1="0" y1="0" x2="900" y2="0"/>
+								<line class="left" x1="0" y1="60" x2="0" y2="-920"/>
+								<line class="bottom" x1="220" y1="60" x2="-600" y2="60"/>
+								<line class="right" x1="220" y1="0" x2="220" y2="1380"/>
+							</svg>
+						
+						Je fais un don
+						</a>
+					</p>
+				</div>
+
+				<div class="boxResponsive" style="border-radius:8px;">
+					<p>
+						<a href="{{ path('soleil_don_accueil') }}">
+							<svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" style="border-radius:5px;">
+								<line class="top" x1="0" y1="0" x2="900" y2="0"/>
+								<line class="left" x1="1" y1="60" x2="0" y2="-920"/>
+								<line class="bottom" x1="376" y1="60" x2="-600" y2="60"/>
+								<line class="right" x1="376" y1="0" x2="376" y2="1380"/>
+							</svg>
+						
+						Je fais un don
+						</a>
+					</p>
+				</div>
+			</div>
+		</article>
+
+		<article id="contactez-nous" class="grid_3bis alpha omega push_1bis">
+			<h2>Contactez-nous</h2>
+			<p>
+				<a href="mailto:{{ contact.mail }}">{{ contact.mail }}</a><br/>
+				<a href="tel:{{ contact.tel }}">{{ contact.tel }}</a><br/>
+				<a href="tel:{{ contact.gsm }}">{{ contact.gsm }}</a>
+			</p>
+		</article>
+
+		<article id="suivez-nous" class="grid_3bis alpha omega push_3bis">
+			<h2>Suivez-nous</h2>
+
+			<div>
+				<figure id="linkedin">
+					<a href="{{ conf.likedln }}" target="_blank"
+					onMouseOver="document.getElementById('logo-linkedin').src='{{ asset('site/img/linkedin-hover.png') }}';"
+					onMouseOut="document.getElementById('logo-linkedin').src='{{ asset('site/img/linkedin.png') }}';">
+						<img src="{{ asset('site/img/linkedin.png') }}" alt="linkedin" title="linkedin" id="logo-linkedin" />
+					</a>
+				</figure> 
+
+				<figure class="prefix_1bis">
+					<a href="{{ conf.twitter }}" target="_blank" 
+					onMouseOver="document.getElementById('logo-twitter').src='{{ asset('site/img/twitter-hover.png') }}';"
+					onMouseOut="document.getElementById('logo-twitter').src='{{ asset('site/img/twitter.png') }}';">
+						<img src="{{ asset('site/img/twitter.png') }}" alt="twitter" title="twitter" id="logo-twitter" />
+					</a>
+				</figure>
+
+				<figure id="facebook" class="prefix_1bis">  
+					<a href="{{ conf.facebook }}" target="_blank"
+					onMouseOver="document.getElementById('logo-facebook').src='{{ asset('site/img/facebook-hover.png') }}';"
+					onMouseOut="document.getElementById('logo-facebook').src='{{ asset('site/img/facebook.png') }}';">
+						<img src="{{ asset('site/img/facebook.png') }}" alt="facebook" title="facebook" id="logo-facebook" /> <!--image par defaut-->
+					</a> 
+				</figure>
+			</div>
+		</article>
+		
+		<div class="clear"></div>
+	</footer>
+</section>
+		
+		<p id="copyright">Document fait en HTML5 et CSS3 - &copy; Design réalisé par <strong><a href="http://about.me/acyian.art">Rey Emilie</a></strong> - Developpement réalisé par <strong><a href="#">Vanessa Verschoren</a></strong> & <strong><a href="#">Patricia Mestdag</a></strong> - 2014</p>
+
+        

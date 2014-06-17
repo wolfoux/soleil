@@ -1,0 +1,44 @@
+{#DESCRIPTION :       
+     admin,modifier un contact
+
+    Nom du Bundle: soleilArticleBundle
+    Controller: Contact
+    Action    : index
+    ----------------------------------------------
+
+    A INTEGRER : 
+        extends "::SousSite/base.html.twig"
+
+    POUR LE LIENS:
+    Route: soleil_contact_modifier_admin
+          
+
+    VARIABLES DISPONIBLES:
+        - contact: array :  contact
+                     propriétés : id, nom, prenom, tel, gsm, slug, adresse, mail
+
+    ----------------------------------------------                
+    POUR TESTER : www.eft.com/admin/contact/{slug}/modifier
+    ----------------------------------------------
+#}
+
+{% extends "::SousSite/Admin/baseAdmin.html.twig" %}
+
+{% block content %}
+
+    <div class="row">
+        
+          <div class="col-lg-12">
+            <h1>Contact</h1>
+            <ol class="breadcrumb">
+              <li><a href="{{ path('soleil_sous_site_accueil_admin') }}"><i class="fa fa-dashboard"></i> Accueil</a></li>
+              <li><a href="{{ path('soleil_contact_accueil_admin') }}"><i class="fa fa-dashboard"></i> Contact</a></li>
+              <li class="active"></i> Modifier un contact</li>
+            </ol>
+          </div>
+        
+  </div><!-- /.row -->
+    
+    {% include "soleilContactBundle:Contact:Admin/formulaire.html.twig" %}
+    
+{% endblock %}

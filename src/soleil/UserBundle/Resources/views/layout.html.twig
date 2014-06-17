@@ -1,0 +1,40 @@
+{# Vue connection #}
+
+{# On étend notre layout #}
+
+{# Dans notre layout, il faut définir le block body #}
+
+{% block stylesheets %} 
+        <!--FEUILLE DE STYLE-->
+    <link rel="stylesheet" type="text/css" href="{{ asset('site/style.css') }}" />
+        <link rel="stylesheet" type="text/css" href="{{ asset('site/style-safari.css') }}" />
+        <link rel="stylesheet" type="text/css" href="{{ asset('site/style-ie.css') }}" />
+    <!--POLICES-->
+    <link href='http://fonts.googleapis.com/css?family=Abel' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Roboto+Slab' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Roboto+Condensed:400,700' rel='stylesheet' type='text/css'>  
+    <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600,900' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Nunito' rel='stylesheet' type='text/css'>
+    {% endblock %}
+
+{% block body %}
+
+    <section id="login">
+
+    {% if error %}
+        <div>{{ error.message }}</div> 
+    {% endif %}
+
+    {# On affiche les messages flash que définissent les contrôleurs
+    du bundle #}
+    {% for key, message in app.session.flashbag.all() %}
+        <div class="alert alert-{{ key }}">
+        {{ message|trans({}, 'FOSUserBundle') }}
+        </div>
+    {% endfor %}
+
+    {# On définit ce block, dans lequel vont venir s'insérer les autres vues du bundle #}
+        {% block fos_user_content %}
+        {% endblock fos_user_content %}
+</section>
+{% endblock %}

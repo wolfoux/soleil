@@ -1,0 +1,75 @@
+{#DESCRIPTION :       
+    Liste des rubriques par ordre de tri
+
+    Nom du Bundle: soleilagendaBundle
+    Controller: EvenementAgenda
+    Action    : voirSite
+    ----------------------------------------------
+
+    A INTEGRER : 
+        extends "::SousSite/base.html.twig"
+
+    POUR LE LIENS:
+    Route: soleil_agenda_evenement_site
+           Paramètre: STRING : slug de l'evenement'
+
+
+    VARIABLES DISPONIBLES:
+    
+        - evenementAgenda: ARRAY/OBJ : ev
+                     id, nomFr, dateDeb, dateFin, slug,nbMax, nbInsc, descriptionFr, formation_id, site_id, prix, nbJour.
+
+    ----------------------------------------------                
+    POUR TESTER : www.eft.com/{slug_ev}/evenement/voir
+    ----------------------------------------------
+#}
+{% extends "::SousSite/base.html.twig" %}
+
+{% block content %}
+
+
+<section id="etage2" class="alignement_etage2">
+<section id="etage2" class="alignement_etage2">
+	<section id="contenu" class="container">
+
+			<section id="don" class="grid_12 alpha omega">
+
+                                <h2 class="alignement_h2_etage2">{{ ev.nomFr }}</h2>
+
+                                <p> 
+                                    <strong>Nombre max de participants :</strong> {{ ev.nbMax }}<br/>
+                                </p>
+
+                                <p>
+                                    <strong>Formation :</strong> {{ ev.formation.titreFr }}<br/>
+                                    <strong>Prix :</strong> {{ ev.prix }} EUR
+                                </p>
+
+                                <p>
+                                    <strong>Date de début :</strong> {{ ev.dateDeb|date("d/m/Y") }} {{ ev.dateDeb|date("H:i:s") }}<br/>
+                                    <strong>Date de fin :</strong> {{ ev.dateFin|date("d/m/Y") }} {{ ev.dateFin|date("H:i:s") }}<br/>  
+                                </p>
+
+
+                                <h3> Description </h3>
+
+                                {{ ev.descriptionFr|raw }} 
+                                
+                                <p>
+                                    
+                                    {%if "now"|date('Ymd') >= ev.dateDeb|date("Ymd") %}
+                                       <strong>Inscription :</strong> close
+                                    {% elseif ev.nbMax  == ev.nbInsc %}                  
+                                       <strong>Inscription :</strong> complet
+                                     {% else %}
+                                        <a href="{{ path('soleil_inscription_paiement_details',{'slug_ev':ev.slug}) }}">S'inscrire</a>
+                                    {% endif %}
+
+                                </p>
+
+			</section>
+	</section>
+</section>   
+</section>
+{% endblock %}
+

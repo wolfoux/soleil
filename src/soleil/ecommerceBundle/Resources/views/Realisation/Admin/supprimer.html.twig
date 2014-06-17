@@ -1,0 +1,42 @@
+DESCRIPTION :       
+  admin, realisation
+
+    Nom du Bundle: soleilArticleBundle
+    Controller: Realisation
+    Action    : supprimer
+    ----------------------------------------------
+
+    A INTEGRER : 
+        extends "::SousSite/base.html.twig"
+
+    POUR LE LIENS:
+    Route: soleil_realisation_accueil_admin
+          
+	VARIABLES DISPONIBLES:
+        - realisation: obj:  realisation
+                     propriétés : id, titreFr, titreEn,textFr; textEn, slug, dimension, prix, vendu, realiserpar, image_id
+       
+    
+    ----------------------------------------------                
+    POUR TESTER : www.eft.com/admin/realisation
+    ----------------------------------------------
+
+
+{% extends "::SousSite/Admin/baseAdmin.html.twig" %}
+
+{% block content %}
+
+    <h1>Admin - Article - suprimer</h1>
+
+    <p>
+    Etes-vous certain de vouloir supprimer cette réalisation "{{
+    realisation.titreFr }}" ?
+    </p>
+
+    <form action="{{ path('soleil_realisation_supprimer_admin', {'slug': realisation.slug}) }}" method="post">
+
+    <input type="submit" value="Supprimer" class="btn btn-danger" />
+    {{ form_rest(form) }}
+    </form>
+    
+{% endblock %}

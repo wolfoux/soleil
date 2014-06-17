@@ -1,0 +1,48 @@
+{#DESCRIPTION :       
+     confirmation de l'envoi du mail
+
+    Nom du Bundle: soleilArticleBundle
+    Controller: Contact
+    Action    : index
+    ----------------------------------------------
+
+    A INTEGRER : 
+        extends "::SousSite/base.html.twig"
+
+   
+          
+
+    VARIABLES DISPONIBLES:
+        - contact: array :  contact
+                     propriétés : id, nom, prenom, tel, gsm, slug, adresse, mail
+
+    ----------------------------------------------                
+    POUR TESTER : www.eft.com/contact}
+    ----------------------------------------------
+#}
+
+{% extends "::SousSite/base.html.twig" %}
+
+{% block content %}
+
+<section id="etage2" class="alignement_etage2">
+	<section id="contenu" class="container">
+
+			<section id="don" class="grid_12 alpha omega">
+
+               <h2 class="alignement_h2_etage2">Mail Envoyé</h2>
+
+				<form id="formulaire-don-confirmation">
+                                        <fieldset class="grid_12" id="don-confirmation">
+							<h3>Confirmation</h3>
+							Votre mail a bien été envoyé et sera traité dans les plus bref delais
+
+                                                        
+					</fieldset>
+				</form>
+			</section>
+	</section>
+</section>
+
+{% endblock %}
+

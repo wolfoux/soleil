@@ -1,0 +1,7 @@
+parameters:
+#    soleilecommerce.example.class: soleil\ecommerceBundle\Example
+
+services:
+#    soleilecommerce.example:
+#        class: %soleilecommerce.example.class%
+#        arguments: [@service_id, "plain_value", %parameter%]

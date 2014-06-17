@@ -1,0 +1,83 @@
+{#DESCRIPTION :       
+    confirmer l'inscription
+
+    Nom du Bundle: soleilagendaBundle
+    Controller: Inscription
+    Action    : index
+    ----------------------------------------------
+
+    A INTEGRER : 
+        extends "::SousSite/base.html.twig"
+
+    POUR LE LIENS:
+    Route: soleil_inscription_paiement_confirmation
+           Paramètre: STRING : slug de la rubrique
+
+    Route l'envoi: POST + soleil_inscription_paiement_confirmation
+           Paramètres: slug: STRING: slug de l'evenement
+           Paramètres: slug: STRING: slug de l'inscription
+
+    VARIABLES DISPONIBLES:
+        - inscri: ARRAY/OBJ :  inscri
+                     propriétés : id, nom, genre, tel, mail, datenaissance, dateIsc, slug, adresse, ville, pays,evenementAgenda_id, amount
+	
+		- evenementAgenda: ARRAY/OBJ :  inscri.evenementAgenda
+                     id, nomFr, dateDeb, dateFin, slug,nbMax, nbInsc, descriptionFr, formation_id, site_id, prix, nbJour.
+
+    ----------------------------------------------                
+    POUR TESTER : www.eft.com/slug de la rubrique
+    ----------------------------------------------
+#}
+
+{% extends "::SousSite/base.html.twig" %}
+
+{% block content %}
+
+<section id="etage2" class="alignement_etage2">
+	<section id="contenu" class="container">
+
+			<section id="don" class="grid_12 alpha omega">
+
+               <h2 class="alignement_h2_etage2">Résumer inscription</h2>
+
+				<form id="formulaire-don-paiement">
+	            	<fieldset class="grid_12" id="don-paiement">
+							{#<h3>Paiement</h3>#}
+							<h4>Récapitulatif de vos informations personnelles</h4> 
+
+						<p class="infos-don-paiement grid_5">
+							<strong>{{inscri.genre }} {{inscri.nom }} </strong><br/>
+							<strong>Téléphonr :</strong> {{inscri.tel }}<br/>
+                                                        <strong>Mail :</strong> {{inscri.mail }}<br/>
+                                                        <strong>Date de naissance :</strong> {{inscri.datenaissance|date('d-m-Y') }}
+						</p>
+						
+						<p id="infos-transaction" class="infos-don-paiement grid_5">
+							<strong>Numéro de la transaction :</strong> {{inscri.numInscrit }}<br/>
+                                                        <strong>Evènement :</strong> {{inscri.evenementAgenda.nomFr }}<br/>
+							<strong>Montant :</strong> {{inscri.amount }} EUR<br/> 	
+                                                        <strong>Bénéficiaire :</strong> Avec Le Soleil ASBL
+						</p>
+                                                
+                                                {#
+						<div class="les-boutons-radio" style="padding-top:0px;">
+							<div class="bouton-radio autre-montant">
+							 	<strong>Téléphonr :</strong> {{inscri.tel }}<br/>
+                                                                <strong>Mail :</strong> {{inscri.mail }}<br/>
+                                                                <strong>Date de naissance :</strong> {{inscri.datenaissance|date('d-m-Y') }} 	
+							</div>
+						</div>
+                                                #}
+                                               
+
+	                    <div>
+
+						</div>
+					</fieldset>
+				</form>	            
+			</section>
+	</section>
+</section>
+
+{% endblock %}
+

@@ -1,0 +1,70 @@
+{#DESCRIPTION :       
+     liste des articles
+
+    Nom du Bundle: soleilArticleBundle
+    Controller: Article
+    Action    : article
+    ----------------------------------------------
+
+    A INTEGRER : 
+        extends "::SousSite/base.html.twig"
+
+    POUR LE LIENS:
+    Route: soleil_article_accueil
+          
+
+    VARIABLES DISPONIBLES:
+        - article: array :  article
+                     propriétés : id, titreFr, titreEn, textFr, textEn, date, dateEdition, slug, site_id, image_id, video
+                     
+
+    ----------------------------------------------                
+    POUR TESTER : www.eft.com/article
+    ----------------------------------------------
+#}
+{% for  av in articlesVideo %}
+    
+     {% if loop.index == 1 %}
+
+        <h2>Vidéos</h2>
+
+      {% endif %}
+  
+    <article id="article{{loop.index}}" class="grid_4bis alpha{{loop.index}} omega{{loop.index}}">
+        <h3>{{ av.titreFr }}</h3> 
+        <iframe width="298" height="200" src="{{ av.video }}" allowfullscreen class="grid_4bis alpha omega"></iframe>
+        {{ av.textFr|raw }} 
+    </article>
+    
+{% endfor %}
+
+{% for  av in articlesVideo %}
+        {% if loop.index == 1 %}
+ <p class="toutes-videos"><a href="{{ path('soleil_article_voir_plus',{'voirplus':'articleVideo'}) }}">voir + de vidéos</a></p>
+ {% endif %}
+{% endfor %}
+
+ 
+{% for  a in articles %}
+
+    {% if loop.index == 1 %}
+
+        <h2>Articles</h2>
+
+      {% endif %}
+        
+    <article id="article{{loop.index}}" class="grid_4bis alpha{{loop.index}} omega{{loop.index}}">
+        <h3>{{ a.titreFr }}</h3> 
+        {{ a.textFr|raw }}
+    </article>
+        
+{% endfor %}
+
+{% for  a in articles %}
+        {% if loop.index == 1 %}
+ <p class="toutes-videos"><a href="{{ path('soleil_article_voir_plus',{'voirplus':'article'}) }}">voir + d'articles</a></p>
+ {% endif %}
+{% endfor %}
+
+
+

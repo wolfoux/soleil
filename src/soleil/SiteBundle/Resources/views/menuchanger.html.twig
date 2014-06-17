@@ -1,0 +1,45 @@
+{#DESCRIPTION :       
+  admin, liste des formations 
+
+    Nom du Bundle: soleilArticleBundle
+    Controller: Site
+    Action    : menuchanger
+    ----------------------------------------------
+
+    POUR LE LIENS:
+    Route: soleil_sous_site_accueil
+
+    VARIABLES DISPONIBLES:
+        - site: obj: sites
+                     propriétés : id, titreFr, titreEn,textFr; textEn, domaine, image
+       
+    ----------------------------------------------                
+    POUR TESTER : www.eft.com
+    ----------------------------------------------  
+#}
+<nav id="menuPrincipal">
+    
+    <ul>
+        
+    {% for site in sites %}
+       
+        <li id="decalage-haut{{loop.index0}}" class="grid_2">
+		<div class="shape">
+                    <p class="overlay" id="forme{{loop.index}}"></p>
+                    <div class="details">
+			<span class="heading">{{ site.titreFr }}</span><hr />
+			<p>{{ site.descFr }}</p>		
+			<a href="http://{{site.domaine}}" class="button">VOIR</a>
+                    </div>
+                    <div class="bg"></div>
+			<figure>
+                            <img src="{{ asset('site/img/'~site.image) }}" alt="EFT avec le soleil asbl" />
+			</figure> 
+		</div>		
+        </li>
+
+    {% endfor %}
+     
+    </ul>
+        
+</nav>

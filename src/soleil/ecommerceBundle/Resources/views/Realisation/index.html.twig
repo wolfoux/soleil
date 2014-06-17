@@ -1,0 +1,129 @@
+{% extends "::SousSite/base.html.twig" %}
+
+{#DESCRIPTION :       
+  page des realisations
+
+    Nom du Bundle: soleilArticleBundle
+    Controller: Realisation
+    Action    : index
+    ----------------------------------------------
+
+    A INTEGRER : 
+        extends "::SousSite/base.html.twig"
+
+    POUR LE LIENS:
+    Route: soleil_realisation_accueil
+          
+
+    VARIABLES DISPONIBLES:
+        - realisation: array :  realisation
+                     propriétés : id, titreFr, titreEn,textFr; textEn, slug, dimension, prix, vendu, realiserpar, image_id
+    ----------------------------------------------                
+    POUR TESTER : www.eft.com/realisation
+    ----------------------------------------------
+#}
+
+
+
+
+{% block content %}
+  
+<section id="etage2" class="alignement_etage2">
+	<section id="contenu" class="container">
+
+		<section id="articles_avec-realisations" class="grid_12 alpha omega">
+			<h2>Nos réalisations</h2>
+
+			<section id="big-realisations">
+		            
+                            {% set i = 1 %}
+                            
+                            {% for r in realisation %}
+                            
+                                {% if i==5 %} {% set i = 1 %} {% endif %}
+                            
+				<div class="doubleArticle">
+                                    {% if loop.index is divisibleby(3) %}
+                                        <article class="grid_3_realisations realisation{{i}} ecran2RealisationUnique ">
+                                    {% else %}
+                                        <article class="grid_3_realisations realisation{{i}} ecran2Realisation">
+                                    {% endif %}
+					
+					
+						<h3>{{ r.titreFr}}</h3>
+						<figure>
+							
+                                                        <img
+                                                        src="{{ asset(r.image.webPath) }}"
+                                                        alt="{{ r.titreFr}}" class="taillePetitImage"
+                                                        />
+                                                        
+						</figure>
+						<div>
+							<p><strong>Dimensions :</strong> {{ r.dimension }}</p>
+							<p><strong>Réalisé par :</strong> {{ r.realiserpar }}</p>
+							<p class="alignePrix">{{ r.prix }}</p>
+                                                        {% if r.vendu == 0 %}
+							   <p class="bouton"><a href="{{ path('soleil_realisation_paiement_details',{'slug_r':r.slug}) }}">Acheter</a></p>
+                                                        {% else %}
+                                                           <p class="boutonVendu"><a>Vendu</a></p>
+                                                        {% endif %}
+						</div>
+					
+					</article>
+<!--====================================TEST INFOS SUR IMAGE 1===================================-->
+					<article class="grid_3_realisations visuel{{i}} alpha omega">
+						<h3>{{ r.titreFr}}</h3>
+
+							<div class="frame">
+								<b class="r1 c1"></b><b class="r1 c2"></b><b class="r1 c3"></b><b class="r1 c4"></b><b class="r1 c5"></b><b class="r1 c6"></b><b class="r1 c7"></b><b class="r1 c8"></b><b class="r1 c9"></b><b class="r1 c10"></b><b class="r1 c11"></b>
+
+								<b class="r2 c1"></b><b class="r2 c2"></b><b class="r2 c3"></b><b class="r2 c4"></b><b class="r2 c5"></b><b class="r2 c6"></b><b class="r2 c7"></b><b class="r2 c8"></b><b class="r2 c9"></b><b class="r2 c10"></b><b class="r2 c11"></b>
+
+								<b class="r3 c1"></b><b class="r3 c2"></b><b class="r3 c3"></b><b class="r3 c4"></b><b class="r3 c5"></b><b class="r3 c6"></b><b class="r3 c7"></b><b class="r3 c8"></b><b class="r3 c9"></b><b class="r3 c10"></b><b class="r3 c11"></b>
+
+								<b class="r4 c1"></b><b class="r4 c2"></b><b class="r4 c3"></b><b class="r4 c4"></b><b class="r4 c5"></b><b class="r4 c6"></b><b class="r4 c7"></b><b class="r4 c8"></b><b class="r4 c9"></b><b class="r4 c10"></b><b class="r4 c11"></b>
+
+								<b class="r5 c1"></b><b class="r5 c2"></b><b class="r5 c3"></b><b class="r5 c4"></b><b class="r5 c5"></b><b class="r5 c6"></b><b class="r5 c7"></b><b class="r5 c8"></b><b class="r5 c9"></b><b class="r5 c10"></b><b class="r5 c11"></b>
+
+								<b class="r6 c1"></b><b class="r6 c2"></b><b class="r6 c3"></b><b class="r6 c4"></b><b class="r6 c5"></b><b class="r6 c6"></b><b class="r6 c7"></b><b class="r6 c8"></b><b class="r6 c9"></b><b class="r6 c10"></b><b class="r6 c11"></b>
+
+								<b class="r7 c1"></b><b class="r7 c2"></b><b class="r7 c3"></b><b class="r7 c4"></b><b class="r7 c5"></b><b class="r7 c6"></b><b class="r7 c7"></b><b class="r7 c8"></b><b class="r7 c9"></b><b class="r7 c10"></b><b class="r7 c11"></b>
+
+								<b class="r8 c1"></b><b class="r8 c2"></b><b class="r8 c3"></b><b class="r8 c4"></b><b class="r8 c5"></b><b class="r8 c6"></b><b class="r8 c7"></b><b class="r8 c8"></b><b class="r8 c9"></b><b class="r8 c10"></b><b class="r8 c11"></b>
+
+								<b class="r9 c1"></b><b class="r9 c2"></b><b class="r9 c3"></b><b class="r9 c4"></b><b class="r9 c5"></b><b class="r9 c6"></b><b class="r9 c7"></b><b class="r9 c8"></b><b class="r9 c9"></b><b class="r9 c10"></b><b class="r9 c11"></b>
+
+								<b class="r10 c1"></b><b class="r10 c2"></b><b class="r10 c3"></b><b class="r10 c4"></b><b class="r10 c5"></b><b class="r10 c6"></b><b class="r10 c7"></b><b class="r10 c8"></b><b class="r10 c9"></b><b class="r10 c10"></b><b class="r10 c11"></b>
+
+								<b class="r11 c1"></b><b class="r11 c2"></b><b class="r11 c3"></b><b class="r11 c4"></b><b class="r11 c5"></b><b class="r11 c6"></b><b class="r11 c7"></b><b class="r11 c8"></b><b class="r11 c9"></b><b class="r11 c10"></b><b class="r11 c11"></b>
+
+								<img
+                                                                src="{{ asset(r.image.webPath) }}"
+                                                                alt="{{ r.titreFr}}"
+                                                                />
+							</div>
+
+						<div>
+							<p><strong>Dimensions :</strong> {{ r.dimension }}</p>
+							<p><strong>Réalisé par :</strong> {{ r.realiserpar }}</p>
+							<p class="alignePrix">{{ r.prix }}</p>
+							{% if r.vendu == 0 %}
+							   <p class="bouton"><a href="{{ path('soleil_realisation_paiement_details',{'slug_r':r.slug}) }}">Acheter</a></p>
+                                                        {% else %}
+                                                           <p class="boutonVendu"><a>Vendu</a></p>
+                                                        {% endif %}
+						</div>
+					</article>
+<!--=================================FIN DE TEST INFOS SUR IMAGE 1=================================-->
+				</div>
+                            
+                                {% set i = i+1 %}
+                            {% endfor %}
+                            
+			</section>
+		</section>
+	</section>
+</section>
+{% endblock %}
+

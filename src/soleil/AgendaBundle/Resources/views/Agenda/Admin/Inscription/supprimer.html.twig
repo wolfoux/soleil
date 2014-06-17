@@ -1,0 +1,71 @@
+{#DESCRIPTION :       
+    admin: suprimer
+
+    Nom du Bundle: soleilagendaBundle
+    Controller: evenementAgenda
+    Action    : suprimer
+    ----------------------------------------------
+
+    A INTEGRER : 
+        extends "::SousSite/base.html.twig"
+
+    POUR LE LIENS:
+    Route: soleil_agenda_accueil_admin
+      varible:{slug_ev}
+           
+
+    VARIABLES DISPONIBLES:
+        - inscri: ARRAY/OBJ :  i
+                     propriétés : id, nom, genre, tel, mail, datenaissance, dateIsc, slug, adresse, ville, pays,evenementAgenda_id, amount
+  
+    
+                     
+
+    ----------------------------------------------                
+    POUR TESTER : www.eft.com/{slug_ev}/evenement/supprimer
+    ----------------------------------------------
+
+#}
+{% extends "::SousSite/Admin/baseAdmin.html.twig" %}
+
+{% block content %}
+
+    <div class="row">
+        
+          <div class="col-lg-12">
+            <h1>Inscription - supprimer</h1>
+            <ol class="breadcrumb">
+              <li><a href="{{ path('soleil_sous_site_accueil_admin') }}"><i class="fa fa-dashboard"></i> Accueil</a></li>
+              <li><a href="{{ path('soleil_agenda_inscription_admin') }}"><i class="fa fa-table"></i> Inscription</a></li>
+              <li class="active"></i> Supprimer</li>
+            </ol>
+          </div>
+        
+  </div><!-- /.row -->
+
+  <div class="row">
+      
+    <div class="col-lg-12">
+        
+        <h4>Numéro Inscription : {{ i.numInscrit}} </h4>
+        
+         <p>
+         Etes-vous certain de vouloir supprimer cette inscription ?
+         </p>
+         
+         <p>
+             <strong>ATTENTION lorsque vous supprimer une inscription celle-ci s'éface juste de la litse</strong><br/>
+             Le nombre d'inscris a l'évènement reste inchanger.
+         </p>
+
+         <form action="{{ path('soleil_agenda_inscription_supprimer_admin', {'slug': i.slug}) }}" method="post">
+
+         <input type="submit" value="Supprimer" class="btn btn-danger" />
+         {{ form_rest(form) }}
+         </form>
+    </div>
+      
+  </div><!-- /.row -->
+
+
+{% endblock %}
