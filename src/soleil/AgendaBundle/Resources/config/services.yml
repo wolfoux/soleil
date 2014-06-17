@@ -1,7 +1,0 @@
-parameters:
-#    soleil_agenda.example.class: soleil\AgendaBundle\Example
-
-services:
-    payment.plugin.paypal:
-        class: PaypalPlugin
-        tags: [{name: payment.plugin}]

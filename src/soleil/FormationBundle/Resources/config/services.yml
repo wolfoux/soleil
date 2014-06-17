@@ -1,7 +1,0 @@
-parameters:
-#    soleil_formation.example.class: soleil\FormationBundle\Example
-
-services:
-#    soleil_formation.example:
-#        class: %soleil_formation.example.class%
-#        arguments: [@service_id, "plain_value", %parameter%]

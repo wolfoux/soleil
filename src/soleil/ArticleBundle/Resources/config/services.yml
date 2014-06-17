@@ -1,7 +1,0 @@
-parameters:
-#    soleil_article.example.class: soleil\ArticleBundle\Example
-
-services:
-#    soleil_article.example:
-#        class: %soleil_article.example.class%
-#        arguments: [@service_id, "plain_value", %parameter%]
